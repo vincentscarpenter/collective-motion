@@ -1,0 +1,79 @@
+!                              -*-f90-*-     (for emacs)
+&init_pars
+!
+! Particle radius from experiment is 165e-6 / 2 = 82.5e-6 m, with a Knudsen number (lambda/r) = 0.08
+! This means that lambda = 0.08 * 82.5e-6 m = 6.6e-6 m.
+! Therefore, if we want to resolve lambda, we must consider how many grid points we need in each direction
+! given how long each direction is.
+!
+! Taking units here in cm (as determined elsewhere in this file, see other comments), we can figure this out.
+! For instance, x-direction is 4e-2, then using 8192 grid points gives 4.9e-6 per point. This is sufficient,
+! but thats a lot of grid points...........could maybe use 4096 points? Still a lot...and then we'd have slightly
+! sub-par resolution.
+!
+  cvsid='$Id$',
+  xyz0  =    0.0,  -0.500,  -0.10
+  xyz1  =    4.0,   0.500,   0.10
+  lperi =      T,       F,      T
+  lwrite_ic=T, lwrite_aux=T
+  llocal_iso=T
+  ip=14
+/
+&initial_condition_pars
+!
+! Locally isothermal -> local cs2 = global cs2 in EOS module; global cs2 must be set somewhere
+! No other module appears to do this for a locally isothermal simulation, must be done here.
+!
+! To match the experiment (22 cm x 22 cm, friction time = 7 ms) need units of cm and ms. In
+! m/s, sound speed of air (treated as an ideal gas, c = (gamma * pressure/density))
+! at 950 Pa and 0.15 kg/m^3 (with gamma = 1.4) is 94 m/s = 9.4 cm/ms
+!
+  cs0=9.4   ! see above
+!
+! Moved the particle position initialization to the initial condition module as well, for now.
+! Could move some of the configurations which might be more generally useful back to particles
+! modules later, maybs
+!
+  initializexxp='single-particle'
+  xp0= 1.00
+  yp0= 0.00
+  zp0= 0.00
+/
+&hydro_init_pars
+  inituu='zero'  ! no initial gas motion; this may change after the basic simulation
+/
+&density_init_pars
+  initlnrho='const_rho'
+  rho_const=1.0          ! experiment gas density = 0.15 kg/m^3
+  ldensity_nolog=T
+/
+&entropy_init_pars
+/
+&eos_init_pars
+  gamma=1.4
+  ! locally isothermal; no need for rho0 here (set in density module)
+  ! locally isothermal; no need for cs0 here (set based on global value, which is determined in InitialCondition module)
+/
+&grav_init_pars
+  lgravx_gas=F,lgravy_gas=F,lgravz_gas=F  ! don't want any gravity on the gas, for now; although maybles i do??!?
+/
+&particles_init_pars
+  initxxp='nothing'        ! will be handled specially by the InitialCondition module
+  initvvp='constant'
+  vpx0= 0.0
+  vpy0= 0.0
+  vpz0= 0.0
+  bcpx='p',bcpy='rmv'      ! remove particles as they cross the y boudary; let them continue periodically across x boundary
+  lcheck_exact_frontier=T
+  lmigration_real_check=T
+  lparticlemesh_tsc=T      ! interpolation scheme for moving particle quantities to the mesh and back
+  !lparticlemesh_cic=T  
+  tausp=7.0                ! stopping time ; experiment friction time = 7ms, makes time units ms
+  rhopmat=400.0            ! material density ; experiemnt rhopmat = 60 kg/m^3
+  eps_dtog=0.15            ! seems like overspecification? maybe not with radius? anyway ; experiment eps_dtog = 0.15 (initially)
+/
+!&particles_radius_init_pars
+!  initap="constant"
+!  ap0=1.0
+!  lfixed_particles_radius=T
+!/
