@@ -95,7 +95,8 @@ module InitialCondition
 !
   namelist /initial_condition_pars/ &
        cs0, initializexxp, xb0, yb0, zb0, &
-       npx, npy, npz, Lbx, Lby, Lbz
+       npx, npy, npz, Lbx, Lby, Lbz, &
+       xp0, yp0, zp0
 !
   contains
 !***********************************************************************
