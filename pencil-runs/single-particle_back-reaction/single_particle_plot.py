@@ -11,14 +11,16 @@ ts_dictionary = ts.__dict__
 start_params = pencil.read_param()
 grav = start_params.gravx
 
-if(len(sys.argv) == 1):
-    print("Need timeseries value to plot. Options are: ")
-    print(ts_dictionary.keys())
-    quantity_name = raw_input("Please make a selection, or type Q to quit: ")
-    if(quantity_name == "Q"):
-        sys.exit("Quitting...")
-else:
-    quantity_name = sys.argv[1]
+#if(len(sys.argv) == 1):
+#    print("Need timeseries value to plot. Options are: ")
+#    print(ts_dictionary.keys())
+#    quantity_name = raw_input("Please make a selection, or type Q to quit: ")
+#    if(quantity_name == "Q"):
+#        sys.exit("Quitting...")
+#else:
+#    quantity_name = sys.argv[1]
+
+quantity_name = "vpxm"
 
 try:
     quantity = ts_dictionary[quantity_name]
@@ -28,9 +30,9 @@ except KeyError:
 figure  = pylab.figure()
 subplot = figure.add_subplot(111)
 time    = ts.t/0.014
-subplot.plot(time,quantity,color="black")
-subplot.plot(time,ts.t*490,linestyle="--",color="gray")
-subplot.plot(time,numpy.repeat(980*0.014,len(time)),linestyle="-",color="green")
+subplot.plot(time,quantity,linestyle="none",marker=".",markeredgecolor="black",markerfacecolor="none")
+subplot.plot(time,ts.t*245,linestyle="--",color="gray")
+subplot.plot(time,numpy.repeat(245*0.014,len(time)),linestyle="-",color="green")
 
 if(len(sys.argv) == 3):
     log_y_str = sys.argv[2]

@@ -4,12 +4,13 @@
 !
 &run_pars
   cvsid='$Id$',
-  nt=10000
-  it1=10, dsnap=100.0, dvid=0.1
-  isave=1000, d2davg=1.0
-  dtmin=1.0e-6
-  itorder=3, cdt=0.4, cdtv=0.25
+  nt=1000000000
+  it1=100, dsnap=.014, dvid=0.00014, isave=1000, d2davg=0.014
+  dtmin=1.0e-10
+  itorder=3, cdt=0.4, cdtv=0.4
   lpencil_check=T
+  tmax=2                         ! maximum simulation time, in code units ; (1 seconds with code units as 0.5 s ; about 200 friction times)
+  max_walltime=85800             ! maximum wall clock time, in seconds    ; 23h50m
 /
 &eos_run_pars
 /
@@ -46,7 +47,7 @@
 !
   gravx_profile='const'
   gravz_profile='zero'
-  gravx=9.8e-1                ! experiment gravitational acceleration = 9.8 m/s = 0.98 cm/ms (as demanded to match experiment; see start.in)
+  gravx=245                ! experiment gravitational acceleration = 9.8 m/s^2 = 0.00098 cm/ms^2 (as demanded to match experiment; see start.in)
   lcheck_exact_frontier=T
   lmigration_redo=T
 /
