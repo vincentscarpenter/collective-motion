@@ -1,6 +1,8 @@
 !                              -*-f90-*-     (for emacs)
 &init_pars
 !
+!!!!!!!!!!! TEMPORARILY IN METERS, NOT CM
+!
 ! Particle radius from experiment is 165e-6 / 2 = 82.5e-6 m, with a Knudsen number (lambda/r) = 0.08
 ! This means that lambda = 0.08 * 82.5e-6 m = 6.6e-6 m.
 ! Therefore, if we want to resolve lambda, we must consider how many grid points we need in each direction
@@ -12,8 +14,8 @@
 ! sub-par resolution.
 !
   cvsid='$Id$',
-  xyz0  =    0.0,  -0.250,  -0.10
-  xyz1  =    4.0,   0.250,   0.10
+  xyz0  =    0.00,  -0.0025,  -0.10
+  xyz1  =    0.04,   0.0025,   0.10
   lperi =      T,       F,      T
   lwrite_ic=T, lwrite_aux=T
   llocal_iso=T
@@ -28,14 +30,14 @@
 ! m/s, sound speed of air (treated as an ideal gas, c = (gamma * pressure/density))
 ! at 950 Pa and 0.15 kg/m^3 (with gamma = 1.4) is 94 m/s = 4700 cm/(0.5 s)
 !
-  cs0=4700   ! see above
+  cs0=47   ! see above
 !
 ! Moved the particle position initialization to the initial condition module as well, for now.
 ! Could move some of the configurations which might be more generally useful back to particles
 ! modules later, maybs
 !
   initializexxp='single-particle'
-  xp0= 1.00
+  xp0= 0.01
   yp0= 0.00
   zp0= 0.00
 /
@@ -69,11 +71,12 @@
   lparticlemesh_tsc=T      ! interpolation scheme for moving particle quantities to the mesh and back
   !lparticlemesh_cic=T
   tausp=0.014              ! stopping time ; = stokes number in code units. St = 0.014, friction time = 0.007 s => code unit of time is 0.5 s
-  rhopmat=500.0            ! material density ; experiemnt rhopmat = 75 kg/m^3, 500 : 1 = 75 : 0.15
-!  eps_dtog=0.15            ! seems like overspecification? maybe not with radius? anyway ; experiment eps_dtog = 0.15 (initially)
+  rhopmat=390.0            ! material density ; from the initial dust to gas ratio given in the experiment, particle density = 390 * air density (may be assuming 60 rather than 75)
+  eps_dtog=0.0            ! seems like overspecification? maybe not with radius? anyway ; experiment eps_dtog = 0.15 (initially)
+  lignore_rhop_swarm=T
 /
-!&particles_radius_init_pars
-!  initap="constant"
-!  ap0=1.0
-!  lfixed_particles_radius=T
-!/
+&particles_radius_init_pars
+  initap="constant"
+  ap0=8.25e-5
+  lfixed_particles_radius=T
+/

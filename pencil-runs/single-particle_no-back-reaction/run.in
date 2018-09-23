@@ -6,7 +6,7 @@
   cvsid='$Id$',
   nt=1000000000
   it1=100, dsnap=.014, dvid=0.00014, isave=1000, d2davg=0.014
-  dtmin=1.0e-10
+  dtmin=1.0e-15
   itorder=3, cdt=0.4, cdtv=0.4
   lpencil_check=T
   tmax=2                         ! maximum simulation time, in code units ; (1 seconds with code units as 0.5 s ; about 200 friction times)
@@ -47,7 +47,9 @@
 !
   gravx_profile='const'
   gravz_profile='zero'
-  gravx=245                ! experiment gravitational acceleration = 9.8 m/s^2 = 0.00098 cm/ms^2 (as demanded to match experiment; see start.in)
+  gravx=2.45                ! experiment gravitational acceleration = 9.8 m/s^2 = 0.00098 cm/ms^2 (as demanded to match experiment; see start.in)
   lcheck_exact_frontier=T
   lmigration_redo=T
+/
+&particles_radius_run_pars
 /
