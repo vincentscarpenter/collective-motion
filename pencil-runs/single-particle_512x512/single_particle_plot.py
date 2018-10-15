@@ -30,9 +30,11 @@ except KeyError:
 figure  = pylab.figure()
 subplot = figure.add_subplot(111)
 time    = ts.t/0.014
-subplot.plot(time,quantity,linestyle="none",marker=".",markeredgecolor="black",markerfacecolor="none")
-subplot.plot(time,ts.t*245,linestyle="--",color="gray")
-subplot.plot(time,numpy.repeat(245*0.014,len(time)),linestyle="-",color="green")
+subplot.plot(time,quantity,linestyle="none",marker=".",markeredgecolor="black",markerfacecolor="none",markersize=0.1)
+subplot.plot(time,ts.t*2.45,linestyle="--",color="gray")
+subplot.plot(time,numpy.repeat(2.45*0.014,len(time)),linestyle="-",color="green")
+
+subplot.set_ylim([0.0,0.06])
 
 if(len(sys.argv) == 3):
     log_y_str = sys.argv[2]
