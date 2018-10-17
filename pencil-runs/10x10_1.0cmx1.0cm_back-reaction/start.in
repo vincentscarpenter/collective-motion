@@ -1,8 +1,6 @@
 !                              -*-f90-*-     (for emacs)
 &init_pars
 !
-!!!!!!!!!!! TEMPORARILY IN METERS, NOT CM
-!
 ! Particle radius from experiment is 165e-6 / 2 = 82.5e-6 m, with a Knudsen number (lambda/r) = 0.08
 ! This means that lambda = 0.08 * 82.5e-6 m = 6.6e-6 m.
 ! Therefore, if we want to resolve lambda, we must consider how many grid points we need in each direction

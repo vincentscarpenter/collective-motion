@@ -4,11 +4,11 @@
 !
 &run_pars
   cvsid='$Id$',
-  nt=100
-  it1=10, dsnap=.014, dvid=0.00014, isave=1000, d2davg=0.014
+  nt=1000000000
+  it1=100, dsnap=.14, isave=1000
   dtmin=1.0e-15
   itorder=3, cdt=0.4, cdtv=0.4
-  tmax=2                         ! maximum simulation time, in code units ; (1 seconds with code units as 0.5 s ; about 71 friction times)
+  tmax=1                         ! maximum simulation time, in code units ; (about 71 friction times)
   max_walltime=85800             ! maximum wall clock time, in seconds    ; 23h50m
 !
   tborder=0.0014

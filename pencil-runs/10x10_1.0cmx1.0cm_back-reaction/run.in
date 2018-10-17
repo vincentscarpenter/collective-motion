@@ -10,6 +10,7 @@
   itorder=3, cdt=0.4, cdtv=0.4
   lpencil_check=T
   tmax=2                         ! maximum simulation time, in code units ; (1 seconds with code units as 0.5 s ; about 71 friction times)
+!  max_walltime=42600             ! maximum wall clock time, in seconds    ; 11h50m
   max_walltime=85800             ! maximum wall clock time, in seconds    ; 23h50m
 /
 &eos_run_pars
