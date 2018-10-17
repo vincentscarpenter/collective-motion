@@ -1,8 +1,6 @@
 !                              -*-f90-*-     (for emacs)
 &init_pars
 !
-!!!!!!!!!!! TEMPORARILY IN METERS, NOT CM
-!
 ! Particle radius from experiment is 165e-6 / 2 = 82.5e-6 m, with a Knudsen number (lambda/r) = 0.08
 ! This means that lambda = 0.08 * 82.5e-6 m = 6.6e-6 m.
 ! Therefore, if we want to resolve lambda, we must consider how many grid points we need in each direction
@@ -20,17 +18,17 @@
   lwrite_ic=T, lwrite_aux=T
   llocal_iso=T
   ip=14
+!
+  border_frac_y=0.10,0.10
 /
 &initial_condition_pars
 !
 ! Locally isothermal -> local cs2 = global cs2 in EOS module; global cs2 must be set somewhere
 ! No other module appears to do this for a locally isothermal simulation, must be done here.
 !
-! To match the experiment (22 cm x 22 cm, friction time = 7 ms) need units of cm and 0.5 s. In
-! m/s, sound speed of air (treated as an ideal gas, c = (gamma * pressure/density))
-! at 950 Pa and 0.15 kg/m^3 (with gamma = 1.4) is 94 m/s = 4700 cm/(0.5 s)
+! The soundspeed set in order to set the scale height H = cs*u/g ~ 100 times the size of the box
 !
-  cs0=47   ! see above
+  cs0=30
 !
 ! Moved the particle position initialization to the initial condition module as well, for now.
 ! Could move some of the configurations which might be more generally useful back to particles
@@ -57,7 +55,6 @@
   ! locally isothermal; no need for cs0 here (set based on global value, which is determined in InitialCondition module)
 /
 &grav_init_pars
-  lgravx_gas=F,lgravy_gas=F,lgravz_gas=F  ! don't want any gravity on the gas, for now; although maybles i do??!?
 /
 &particles_init_pars
   initxxp='nothing'        ! will be handled specially by the InitialCondition module
@@ -72,7 +69,7 @@
   !lparticlemesh_cic=T
   tausp=0.014              ! stopping time ; = stokes number in code units. St = 0.014, friction time = 0.007 s => code unit of time is 0.5 s
   rhopmat=390.0            ! material density ; from the initial dust to gas ratio given in the experiment, particle density = 390 * air density (may be assuming 60 rather than 75)
-  eps_dtog=0.0            ! seems like overspecification? maybe not with radius? anyway ; experiment eps_dtog = 0.15 (initially)
+  eps_dtog=0.0             ! seems like overspecification? maybe not with radius? anyway ; experiment eps_dtog = 0.15 (initially)
   lignore_rhop_swarm=T
 /
 &particles_radius_init_pars

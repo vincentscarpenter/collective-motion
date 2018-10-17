@@ -28,3 +28,5 @@ RADIATION = noradiation
 
 FOURIER     =   fourier_fftpack
 POISSON     = nopoisson
+
+BORDER_PROFILES = border_profiles
