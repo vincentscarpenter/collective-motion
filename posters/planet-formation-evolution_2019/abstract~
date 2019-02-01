@@ -1,0 +1,5 @@
+Laboratory experiments conducted by Niclas Schneider and Gerhard Wurm at the
+University of Duisburg-Essen, in which hollow glass beads are dropped through
+a rotating chamber filled with air, have observed a transition in the
+sedimentation behavior of particles in regions of higher local particle
+density: for average dust to gas ratios above 0.08, individual particles sediment faster than isolated particles, with extra speed that depends linearly on their closeness (a parameter measuring how tightly packed they are). We seek to reproduce these results in hydrodynamics simulations using the Pencil Code, both to validate the code and to allow for detailed exploration of the mechanisms triggering the onset of collective particle motion. Here we present preliminary results from ongoing two dimensional simulations, which indicate possible agreement with the experiment. Full three dimensional simulations of this version of the experiment are planned in the future, and we intend to continue collaborating with the team in Duisburg as the experiment is modified.
