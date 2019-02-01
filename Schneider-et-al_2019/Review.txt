@@ -1,0 +1,434 @@
+Dear Editor,
+
+as asked for, we shortened the answer to point E, essentially removing the discussion on the PhD thesis by Capelo.
+We agree that this would normally be too long a reply and paper submission not the right place for rebuttal.
+Our apologies if that looked weird. 
+
+However, the reviewer is obviously biased for some reason. This might still be o.k. but 
+the problem remains now that the reviewer came back to that PhD thesis
+on really many occasions and praised it highly and actually asked us to discuss this more
+which we cannot, so that we are excited to see if our answers will suffice with respect to that.
+
+Hope the current response with list of changes will do.
+
+Sincerely,
+The authors
+
+
+Response to the Reviewer / List of Changes
+
+Dear Reviewer
+many thanks for the detailed review. We changed the manuscript along the lines of criticism.
+Best regards
+Niclas Schneider
+
+**********************************
+Main Concerns:
+
+Reviewer:
+A. The authors title this work 'Streaming Instability in Laboratory Experiments', and emphasise in the abstract that they have discovered the streaming instability in their experiments. Yet, (as mentioned in the caveats and future work section of the paper), they are not equipped to study the high mass-loading regime considered critical to generating the streaming instability and have not found typical properties of instability in general, such as the formation of persistent or growing density waves, or - germane to the streaming instability- spontaneous aggregation of particles that, in their equilibrium state, should be very far apart. While the subtitle 'onset of collective motion in the Knudsen regime' is somewhat more precise than the main title, it is deceiving, since 'onset' has a specific meaning in stability theory that is not equivalent to the settling velocity regime transition they find here. Similarly, the mention of a transition in the abstract, written in terms of the well-known parameter that sets the onset rate of the streaming instability, can easily be misinterpreted to mean that they have observed the onset of a fluid instability as it is typically understood to grow with increasing solid density amplitude, which is not the case here. The title, abstract, and parts of the introduction need to be rewritten so as to not mislead.
+
+Reply: Agreed, we do not really see streaming instability (yet). This was probably a bit exaggerating. This is but a first set of experiments we report here, before starting to refine the setup.
+We changed the title and rewrote the abstract. To avoid confusion, we do no longer call the observed transition an "onset" but it is still a real transition as the experimental data show. We highlight all major changes in bold in the revised manuscript.
+
+Reviewer
+B. The framing of the problem in the abstract and introduction does not strongly motivate this study in terms of why these experiments are needed to gain a better understanding of the streaming instability, as it is currently understood by the theory of protoplanetary discs and in relation to the simplified case of pure sedimentation. 
+
+Reply: Yes, maybe that got blurred. The motivation is very simple. There are no laboratory experiments on dense particle clouds in the given regime yet. There is the Capelo-work. We come to this below. Otherwise, no system with 3 particles or more can be solved analytically. So we think any experimental fact on dense particle clouds at low pressure will help to improve numerical codes or show some basic principles.
+We did put in a few more sentences in the introduction.
+
+
+Reviewer:
+For example, the authors have not clarified what the real importance of rotation is in connection to the streaming instability and in the present study. They repeatedly emphasise the fact that the experimental device is rotating, but they do not study any physics associated with rotation. Indeed, there is theoretical debate about the role of rotation in the streaming instability (see especially Jacquet et al. 2011 and Lambrechts et al. 2016; the series of papers by Hopkins and Squire also address this technicality), yet this study is not in a clear and direct dialogue with this literature on this point. The authors need to either mathematically formalize the rough analogies they make to a rotating protoplanetary disc and explain whether their results help resolve the existing debate about the importance of rotation in the streaming instability, or else remove the over-emphasis on the rotational aspects of the experimental device in the abstract and introduction.
+
+Reply: This might be a misunderstanding. We agree, that rotation in the context of streaming instabilities is a complex thing and debated. We debated that among ourselves as well. We might not have made that clear enough but the rotation of the experiment is not just a gimmick, we arbitrarily chose or can turn off. It is essential for its functioning. It is the basis on which the particles levitate. This is not just the Capelo setup being rotated.
+
+However, as we obviously did not make this clear we added some very specific sentences in the experiment section and the introduction to put emphasize on this and explain how the experiment works in some more detail.
+We need the rotation. Without it, particles would just fall down and are lost in a second. With rotation, they stay afloat for minutes and the evolution of the closed system can be studied.
+
+There is a relation to protoplanetary disks. It comes from the idea to trap particles in (thermal) convection rolls and the situation there would indeed be similar. That is nothing special and nothing where we would want to study a closer relation between experiment and disk. However, the experimental idea comes from this. So we mentioned it. Currently, we do not intend to relate this to the role of rotation during streaming instabilities and hope the revised manuscript is clearer on this now.
+
+In summary, we reformulated some sections to make this clearer.
+
+Reviewer:
+C. There are many omitted details regarding how the experiments were conducted, the properties of the materials involved, how the data was analyzed, how the parameters controlling the system are determined directly from the measurements, and what exactly is shown in the results. Some systematic issues are also potentially serious, such as the use of particles whose mass density and charge-carrying properties are not well characterized (see 3.5 and 4.2 below).I have made suggestions below regarding these matters in sections 2-4.
+
+Reply: Thanks for the hints. Some of the things we do in experiments regularly, we just take for granted and usually do not describe them in papers every time. But certainly, we can make some points clearer. We answer this below in detail then.
+
+Reviewer:
+D. It is not clear in which sense the experimental conditions can be considered steady state. 
+There are several quantities in this system that vary as a function of time and position: the particle seeding density changes steeply with time and the mean location of the particles also changes.
+Concurrently, I believe that the true expectation settling velocity of the particles depends on time and position as well. The authors seem to have assumed that the residual downward component of the velocity will always be given by the terminal velocity of a sphere in a static fluid, and therefore directly compare the settling velocity as a function of number density in time, and imply that since it varies accordingly, it represents a violation of the terminal velocity due to collective particle motion (see points 2.5, 4.1, and 4.6 below). 
+
+Reply:
+Not sure, if that is also due to the basic understanding of how the setup works. We did not intend to study steady state in the sense just to get average statistical properties from observing a small part of the volume. As the setup rotates (we need that) conditions change periodically. We think this might actually be a nice feature in the future rather than a problem but that has to await further work and comparisons to simulations. So in the basic approximation (always terminal speed with respect to the gas, rigid gas rotation, ...) the relative position of particles change over one orbit but after one orbit the arrangement is the same again (if no collective effects change this). It is not in the paper as this is already pretty long. But we do observe this exactly as it should be.
+Overall, we observe each of the few hundred particles continuously in the total particle volume of the dm diameter filled chamber as the chamber rotates (camera fixed, always with respect to the lab frame). 
+
+A homogeneous cloud would remain homogeneous. We currently aim at starting with homogeneous clouds but this is not trivial in terms of seeding. That is all we can say about steady state.
+
+Like Capelo assumes an underlying parabolic flow profile at all times and epsilons and pressures, we have an underlying rigid rotation of the gas in the chamber. Assuming this, a constant settling velocity perfectly fits the observations. As this experiment and the principle in convective eddies is not new, we did not put in equations but it is then simply a superposition of the gas motion (circular linearly depending on distance to the rotation axis) and the sedimentation (always being vertical). This is trivial and just gives an offset circular trajectory as observed. There is no magic here. 
+
+Magic only enters with increasing global epsilon. Certainly, at higher mass loading the gas motion will change. We do not know how (as Capelo also does not know but the draft will not remain parabolic with same speed). We clearly note this already in the manuscript. The absolute measurements of velocity in the lab system are not debatable - experimental facts. Certainly, the interpretation might be different as we currently do not know the gas velocities for higher density cases. 
+
+But the transition we see is really there in any case. 
+As it depends on the global epsilon and at high global epsilon also but only then also on the local density (closeness), we think this
+very interesting. A deeper analysis requires simulations.
+
+Reviewer:
+At present, the lack of detail in the explanation of the data analysis makes it impossible to judge whether the complexities and possible biases added by the presence of centrifugal forces have been thoroughly addressed. Below I request significantly more attention to this point.
+
+Reply: 
+We address this below.
+
+
+E. One previous study has approached the streaming instability as an experimental sedimentation problem in the Knudsen regime (Capelo 2018). The findings in figures 4.16 and 4.17 in the online version of that document show a result very similar to figures 8 and 12 in this paper. The fact that two different experiments find a similar trend (i.e. 'drafting') by different means is not a problem in itself. Actually, this reader is more, not less, inclined to believe the results in this paper due to the existence of an independent confirmation that such behaviour has been shown to occur in a comparable study that used a three-dimensional measurement method and in which the complications added by rotation did not need to be accounted for. I strongly recommend that the authors be completely upfront about the previous study's strikingly similar result. See also remark 1.2 below.
+
+Reply:
+
+We did include the Capelo PhD-thesis reference in our manuscript already and we clearly noted that there has been a study on this and we certainly payed the credit necessary to that achievement. We do not claim to be the first to have ideas about studying the things we do. In fact, Capelo's work is based on a nice idea. 
+However, that credit granted, a PhD thesis is not a refereed paper. It is good scientific practice to refer only to reviewed work as far as scientific results are concerned. 
+So currently, there just is no paper on the Capelo experiments or especially the results to cite. 
+
+The reviewer argues that the results are similar to ours (see below). In that case, we should just be happily agree, saying o.k., confirmation is good, right? But we disagree very strongly that the results are the same. 
+
+To the argument that her fig. 4.16 is like our fig. 8 as suggested by the reviewer, we disagree strongly. In her fig. the velocity does not change with increasing N (or epsilon) further even if we would believe the absolute values of epsilon. 
+It is essentially a line with a very small decrease initially. 
+This is in fact in stark contrast to our work. We do see an increase (increase or decrease depends on definition of the velocity) in velocity and this depends on the global epsilon (not accessible to Capelo) and the closeness or local epsilon but only beyond a certain threshold global epsilon. We wrote this several times in the paper. And we do not only consider particle pairs but all particles in reference to the one given by calculating the closeness. Our results are completely beyond Capelo as she does not consider global epsilons but the numbers in a 1mm cylinder (how small is that?). That is the whole point of our paper that there is a relation. 
+
+Fig. 4.17 and our fig. 12 are argued to be similar. They look similar, we agree. But the velocity dispersion can only be attributed to particle densities if the size distribution is known. Otherwise, nothing can be disentangled from any size dependent effect. Even dilute particle clouds show a velocity distribution due to particle size variations and if a certain size fraction is removed, the distribution changes. Our grains are essentially monodisperse, as monodisperse as you can buy them. So the size distribution is always the same. Our grain sizes only varies within 10 % (!) while the Capelo grain sizes span a factor 2! If the experiment sorts out some of her grain sizes, the distribution will change, which is not known.
+
+In summary: We guess, we are upfront to that work but there is no possible way to debate this further. In any case, to highlight the difference we added some sentences more. 
+
+Reviewer:
+Remarks
+
+
+########
+
+Reviewer:
+0 Abstract
+
+0.1 In addition the the concerns above, I find the abstract to be full of vague and subjective language. It would be helpful to stick to a more typical abstract format, e.g. 1-2 sentences dedicated each to: context/background, goals/aims, methodology/techniques, results, implications.
+
+Reply: Agreed, we followed that suggestion and rewrote the abstract.
+
+
+########
+
+Reviewer:
+1 Introduction
+
+1.1 In the second paragraph, the authors introduce several complex processes potentially occurring in protoplanetary discs, such as turbulence, the zoo of resonant drag instabilities, and the streaming instability, in somewhat reverse chronological order of how these theories were proposed. Certainly there is a lot of discussion about how turbulence may or may not be generated in discs and how it competes with the streaming instability, but turbulence is not considered essential to generating the streaming instability, since Youdin and Goodman and other analytical studies assume a perfectly laminar disc. Since this experiment has extremely low Reynolds numbers and cannot address the complexities added by turbulent flow in discs (it need not), the authors should also explain what is understood about the streaming instability in the linear onset phase, which comes from analytical theory, or in the simplified sedimentation simulations of Lambrechts et al. 2016.
+
+1.2 In the third paragraph, the authors cite two previous works, Lambrechts et al. 2016 and Capelo 2018, which are studies quite related to the present one, and should therefore be given a better and more accurate explanation.
+
+Lambrechts et al. 2016 concerned themselves with whether or not rotation is essential to the streaming instability and if the problem could be boiled down to a case of sedimentation under Earth's gravity (which the present work also assumes, since vertical sedimentation velocity is the only quantity studied). They showed that it could, given specific requirements on the time and length scales under consideration (Rossby number) and mean interparticle separation (momentum diffusion time scale). They offer a unit rescaling in order to meet these criteria. They presented test results from a then newly constructed experimental apparatus and demonstrated that it was already operating optimally to be relevant to the astrophysical case.
+
+Capelo 2018 carefully studied the particles and gas in the facility that Lambrechts et al. 2016 introduced, repeating the experiment under steady-state conditions several times and at different values of Knudsen number and the dust-to-gas ratio. For dust-to-gas ratios less than one, the studied statistics (mainly particle pair relative velocities and settling velocities) were generally noisy and/or statistically unconverged. For dust-to-gas ratios approximately one or greater, a spontaneous aggregation behaviour was found, very similar to the theoretical predictions of the 'mass loaded rain' simulations and semi-analytical analysis in Lambrechts et al. 2016 and in agreement with the order-unity dust-to-gas ratios required in general for the streaming instability to occur. In the dense regions caused by the aggregation phenomenon, the mean Earth-ward settling velocity increases dependent upon the number of particles in a small region under consideration (but only for Knudsen numbers close to but slightly larger than those studied in this work; for larger Knudsen numbers, this particular feature of the dynamics did not occur).
+
+Reply: Our view on the Capelo work is indicated above. There is little more to say. We did put in what we could - mostly highlighting the issues though now. We did give credit to the Lambrecht 2016 paper but our experiments are different. Due to the rotation different particle clumps can see each other on different parts of the orbit. This is not the same situation as simulated.
+Also, we do see effects at dust to gas of 0.08 not at 1.
+
+Reviewer: 
+
+Indeed, the system in the laboratory reproduced some of the most celebrated features of the
+SI, such as the tendency for particle clumps to form, a modification of the velocity statistics,
+and the exhibition of collective drag-reduction effects. In the analysis of the experiments,
+it was found that the velocities of the particles were correlated on small scales, especially
+that their approach velocities became greater in magnitude when their vertical separation
+was within approximately 4 mm. This result was independent of radial distance, suggesting
+that the unstable mode is in the z-direction, which is also the direction in which the drag
+force operates on the particles. This feature is reminiscent of the SI with the unstable mode
+being in the direction of highest-magnitude particle-gas relative motion for radially drifting
+particles in a PPD.
+
+Reply: Calling this a perfect agreement between simulation and experiment or having observed celebrated facts is a bit overrated in our view if it cannot be ruled out that the clumping is just technical, which we would argue is easily possible. 
+There is work on two grains sedimenting, just two grains.
+Such works essentially find the same thing as Capelo that sedimentation changes as grains approach each other. But this is not surprising. So maybe it is just a simple wind shadow effect which has nothing to do with high mass loading of the total cloud? 
+
+1.3 In paragraph 5, the authors write: "The experimental setup that comes closest to mimicking the conditions in a protoplanetary disc is a horizontal rotating cylindrical experiment with a cloud of particles and gas within."
+
+It has not yet been established in this introduction specifically which conditions the authors are trying to mimic. It is not obvious why the system needs to be rotating, since the effects of gas rotation on particle dynamics are not specifically studied in this work. Although some analogies are offered to the rotating disc system, the purpose of the arguments given in section 2 seem to be establishing that it is sufficient to study only sedimentation velocities.
+
+[ Also, a rotating particle cloud is not an adequate technical description of a protoplanetary disc. Although the later sections elaborate on this metaphor, there is no thorough accounting for all the forces acting on particles in a rotating protoplanetary disc, nor strong arguments posed for which of these competing forces are important for the streaming instability and which can be ignored, and so the emphasis on rotation can be seen as misleading. See more below. ]
+
+Reply: As outlined above, we might have been not clear enough on the experiment. Sorry again for that. The system has to rotate. It does not work without. But we removed the "mimic" part reference to disks and formulated questions we want to answer.
+
+Reviewer:
+
+1.4 In paragraph 6, the authors encapsulate in plain language the drafting mechanism they intend to explore and can explore within their current experimental capabilities. However, this paragraph does not directly follow from what has been written previously in the document. The authors need to firmly establish in the introduction what is the significance of this mechanism with regards to the streaming instability and to what extent it is currently understood. I invite the authors to reread the nuanced description of this feature in the early Youdin and Johansen/ Johansen and Youdin papers from 2007; in these works, certainly, particle drafting and the streaming instability seem to coexist, but they are not interchangeable and drafting may be more important in aiding the non-linear evolution than inducing the instability. More recent studies should also be cited to also give an updated perspective on this feature.
+
+Reply:  We reformulated that paragraph.
+
+Reviewer:
+
+1.5 The end of the introduction typically contains a document outline, i.e." in section 2 we do X, in section 3 we show Y..."
+
+Reply: Yes, good point. Added.
+
+Reviewer:
+2 Gas Grain Interaction
+
+2.1 Beginning with equation 6, this section makes reference to the various forces acting upon and directions of motion for the particles in the experimental system. However, since the device has not yet been introduced and a corresponding coordinate system properly aligned with gravity has not been defined, the subsequent definitions' meanings are obscured upon first read. Consider introducing the instrument first. At the very least, define the coordinate system somewhere near the beginning of this section to orient the reader.
+
+Reply: We introduce the experiment first now.
+
+
+Reviewer:
+
+2.2 In the paragraph after equation 10 is introduced, the authors write "... because radial drift is essential for the onset of any Resonant Drag Instability".
+
+This is imprecise. The relative dust-gas motion requirement underlying resonant drag instability does not necessarily need to be oriented in the radial direction in the disc midplane as it is intended here.
+
+Reply: We reformulated that.
+
+
+2.3 The following paragraph the authors write is "In both cases, experiment and disc, a low Stokes number indicates that the mean motion of particles, being either radial drift toward the star, or sedimentation and centrifugal motion in the laboratory, can be described by a terminal velocity to first order".
+
+This analogy does not give a complete accounting of the forces involved in a disc. For drift towards the star in the disc plane, the time scale set by the orbital motion and the length scale set by the disc scale height lead to small Rossby numbers and so Coriolis forces cannot be neglected; as such, it is not simple to move between inertial frames and assume pure sedimentation. There are other ways in which this metaphor falls apart (e.g. the use of tightly coupled particles in the experiments; see 3.5b below), and so I do not recommend trying to suggest an exact equivalence.
+
+Reply: Sure, the reviewer is right. We did not intend an exact equivalence. It is not supposed to give complete accounting of forces. It is still true that to first order it is the terminal velocity. Weidenschilling did this in his 1977 paper and all descriptions of radial drift calculate it just that way. Only if the friction time gets comparable to the orbital timescale does this no longer hold. We are still far from that. As we reexplained the experiment, we think this was weakened in the manuscript to an appropriate level.
+
+
+2.4 The parameters in the Reynolds number are never defined, nor is the significance of the Reynold's number explained.
+
+Reply: We give the Reynolds number. It is only important here to see that the flow should be laminar to start with.
+
+2.5 The authors write, "Eq. 6 holds strictly speaking for small Stokes numbers... ".
+
+I understand the authors' point that a linear drag law (implicit in equations 2 and 3) will only be valid in the absence of turbulence and this is correct. However, I do not think that Eq. 6 holds strictly speaking in this system. It is not the exact expectation value of the downward velocity with respect to the gas rotation, since its derivation is that the particle approaches this velocity over time, when the only two forces acting in direct opposition on it are viscous drag and constant gravitational acceleration, in a constant mean direction. Obviously this is not the case here. Note also that, although the "terminal velocity approximation" is evoked by Youdin and Goodman 2005 (and others to follow) so that they can ignore very local fluid accelerations, it does not imply that the directional dependence of drag force can be ignored in the dynamical equations, their steady drift solutions, or the perturbations to the solutions.
+
+Reply: Absolutely agreed, it is not the exact thing and in very, very detail the velocity approaches the terminal velocity exponentially. But we would consider this a typical mismatch between experimental and theoretical thinking. This is not a theory paper about all details of particle motion on very different scales just to neglect second order terms at the end. 
+Please remember: Our particles make circles (details on these doubts are answered below) just as calculated from this simplified assumption - experimental fact! Or if that does not suffice, just put in numbers. Our friction time is 7 ms. Sedimentation velocities (terminal) are e.g. about 5 cm/s. If you stop gravity the particle would come to rest after only 0.35 mm. In a 10 cm chamber that is negligible to first order or for momentary determinations of velocity. 
+The rotation time of the gas is on the order of a second. Therefore, a grain essentially couples instantaneously to the rotating gas and follows its motion only superimposing a terminal relative speed.
+The next order of perturbation is what we treat as centrifugal force.
+There is nothing wrong with that in experimental physics.
+
+2.6 Regarding equation 11, the authors write: "The local motion of a particle will depend on other particles, as they back-react on the gas. Grains can be considered as "test" particles if epsilon <<1".
+
+In sedimentation physics, such a statement can only be considered half true, since it depends on which factor in equation 11 controls epsilon; this expression can be divided into two factors: a bulk density ratio (rho_p/rho_g), and a volume filling factor (4/3 pi r^3 N/V). In sedimentation as it is typically studied, bulk density ratio is low and it has been found that the highly studied onset of collective particle motion (not due to high mass loading but due to long-range hydrodynamic interactions), is controlled by the volume filling factor, which is defined similarly to the 'closeness' parameter that these authors find to control collective motion in their sedimentation experiments. The most pertinent type of well-known collective motion is that particle velocity fluctuations, which are strongest in the direction of gravity, have a specific correlation length that depends directly upon particle filling factor.
+In a protoplanetary disc, the bulk density ratio is high and the filling factor extremely low, (consider that the density of rock is ~3 g/cm^3 and the density of the gas near the midplane is ~ 10^{-9} g/cm^3 !) so the equilibrium state of particles in a protoplanetary disc, even for relatively high total epsilon >=1 , is to be very far apart from one another. The authors should consider what the closeness requirements of their results imply for the requisite particle closeness in a protoplanetary disc.
+
+Reply: Sure, also agreed to all of that. We tried correlation lengths but figured that this cannot be the whole story as many particles separated largely can still behave like two grains close to each other.
+As pointed out in our revised version we do not claim that we do simulate disks 1 to 1. Sure for sedimentation in fluids the density ratios are often similar. And a huge hollow ball can have large influence even if epsilon would be low. But that does not change anything we did. In fact as we did not vary the density ratios, the difference between filling factor and epsilon is only a factor and both can be used equivalently well. 
+We are far from a dense granular gas. As we did not vary these factors independently, we refrain from discussing this here.
+We included the volume filling factors in table 1 though.
+
+
+2.7 The authors write: "Based on a simple inertia argument, collective motion occurs at least if epsilon >=1. It is one motivation of our work to study at what point exactly the density dependence of particle motion sets in while is still well below 1."
+
+These two sentences seem to be self-contradictory. I think that a distinction between collective motion due to particle proximity and fluid instability due to back-reaction force of high mass-loading needs to be made.
+
+Reply: We did not intend to make this complicated. Sentence one is quite simple. If you have 1 kg of solids in a 1 kg gas, a gas cannot decelerate this without being accelerated and move differently. A tracer particle of 1 microgram at epsilon << 1 is not noted in any gas motion (That is why it is called tracer). So there has to be a transition somewhere. This is not a contradiction. What the reason is and where it occurs is still a good question posed. As we see, it is at 0.08 in our experiments (within some error bars). 
+
+3 Experiments
+
+3.0 I recommend broadly dividing this section in half, with one section dealing explicitly with experimental methods and the other section dealing explicitly with experimental results. Currently the two topics are mixed and it clouds the presentation of both.
+
+Reply: The results already have a different chapter (4).
+What is presented here are not the results. It is already splitted in the setup and basic parameters.
+
+Setup:
+3.1 In the previous section, the rotating system was considered analogous to radial drift on the global scale in a protoplanetary disc. In this section it is now considered analogous to an eddy within the disc. I'm not convinced that it can literally be both at the same time. I think these analogies need to be softened or else, if they are meant literally, should be proposed in a more rigorous mathematical way.
+
+Reply: The interpretation of the reviewer goes much further as we intended. We never said the experiment is analogous to radial drift situations. Maybe this resolves with our additions on the experiment, that rotation is only needed to counterbalance gravity for long time. The radial drift comparison only referred to coupling times and meant nothing else. The eddy thing for sedimentation is true though. The experiment was constructed in view of the eddies.
+
+3.2 It would greatly help to clarify the understanding of the system dynamics if the authors referred to a coordinate system aligned to the relevant forces, pose a momentum-balance equation for a particle, and give the full solution. Once the solution is given, its steady-state down-ward component should be referred to instead of equation 6 for the remainder of the quantitative analysis.
+
+Reply: We introduced a paragraph on the coordinate system and did put in more on the sedimentation velocity.
+
+
+3.4 The section on the experimental setup deserves several more paragraphs describing in much closer detail how the experiments were conducted and how the data was analyzed. In reading this section, many questions come to mind.
+
+Here are just some important questions that arise:
+
+a) The device diameter is 22 cm, but what is the depth?
+Reply: put into the paper now
+
+b) How far away is the camera sensor from the measurement plane?
+Reply: put into the paper now (though this is not important at all)
+
+c) Where is the measurement plane within the volume? What are the exposure times and frame rates of the camera? What are the depth of field and field of view?
+Reply: put into the paper now
+
+d) From the above information, can an estimate of the maximum error in track length (velocity) and position due to studying 2-d projections be given?
+
+Reply: The experiment is set up 2d. There is no limit in track length in the observation plane and errors of individual velocities are negligible. More problematic is the third dimension with respect to closeness but there is nothing to do about it. We currently have to live with that. This is in the text.
+
+e) How is the rotational centre of the chamber identified on the images?
+Reply: put into the paper now
+
+
+f) How long does it take for the rotation to reach its steady rotation frequency and, once it does, for how long does the system relax before the recordings are made? How does this timescale compare to the expectation for particles to get trapped in their quasi-stable epicyclic orbits?
+
+Reply: This is all essentially instantaneous. There is no time needed to trap. As outlined above, friction times are 7ms. Once the setup rotates it is in a working condition. At the low pressure the friction with the walls makes the rotation rigid in a fraction of a second.
+
+g) What procedures using the imageJ software are performed to extract the particle positions and tracks? 
+
+Reply: put into the paper now
+
+
+Are the velocities in a curvilinear coordinate system? How does the coordinate transformation to a cartesian system take place? Is there any decomposition of the expected relative contributions to downward motion due to gravity versus those (either positive or negative) due to centrifugal acceleration?
+
+Reply: It is all the time in cartesian coordinates. Put in the paper now. Gravity always points downward. So no use to go to some rotating system. As centrifugal forces (calculated) only work on timescales of seconds this is not important for local velocities and not considered.
+Put in the paper.
+
+h) How are individual particles tracked in time (such as to make figure 11) and how is the tracking handled when their tracks overlap? 
+Reply: put into the paper now
+
+Similarly, what is the point spread function on the particle intensities and how does it compare to the minimum closeness measured?
+
+Reply: We put in the paper that this not important here. Any measure 
+works just as well (optical center of mass, brightest spot, ...) as this only differentiates on the pixel scale but distances are of significant parts of the image, including hundreds of grains.
+It would influence the maximum not the minimum closeness as a direct contact would result in infinite closeness. These values are excluded by cutting the tracks.
+
+
+
+i) What are the roughness conditions at the container walls? What is the expected dynamical effect on the gas from the side plates and can it be ignored or not? How thick are the side plates and do they have any special optical properties or artifacts?
+
+Reply: The whole chamber rotates including the side plates. Rigid rotation in equilibrium means no more friction at any surface.
+So it can safely be ignored. But that is self-explaining.
+The back side is part of the metal chamber. The front is plane glass. No optical effects. No contact with grains to charge them.
+Illumination and different ports are at the inside cylinder mantle. Otherwise the wall is smooth as metal is. But as the chamber is in rigid rotation with the gas, none of this matters.
+
+j) The sketch in figure 3 shows a giant opening where the particle shaker is. What are the actual dimensions of this opening and can the wall conditions be considered smooth there? Similarly for the electrical feed-throughs and lighting, are they embedded in the walls? A photograph and/or a to-scale sketch of the inside of the apparatus might be more helpful.
+
+Reply: As mentioned before, this is not relevant. The chamber could have any shape. As long as the gas is in rigid rotation, there is no friction with any part of the chamber. Details only matter if a dense particle and gas interaction is simulated later. But this is not the focus here and distracting. We did not observe any anomalies in our gas flow. This is no issue. Anyway, as requested, updated scheme of experiment with added scales in paper now.
+
+
+########
+Experimental parameters
+
+3.5 The authors write "we used hollow glass spheres to get clouds of large non-sticky particles with low particle density for short gas-grain coupling times".
+
+(a) I do not understand what is meant by saying that the particles are "not sticky". I do not know if the authors are referring to the presence of electrostatic forces on particle surfaces here, but it is a concern nevertheless. Glass and air can easily exchange electrons and render the particles non charge neutral. Since the particles are injected using a shaker, they have plenty of opportunity for frictional interactions with each other. This issue is critical for ruling out the possibility that electrostatic forces are not creating particle clumps.
+
+Reply: Sticking refers to surface forces sticking grains together in collisions. We added a sentence. Also true, no doubt, grains might charge but glass and air do not just exchange electrons to charge grains. This is not the plasma at the atmosphere of a protoplanetary disk. Next, friction is restricted to a few seconds. It takes microgravity to see the attraction then (see Yoshimatsu et al 2016 (Scientific reports), where one of the authors also used hollow glass spheres). In another recent paper by Jungmann et al. (in press, also one of the authors as co-author) they studied the interaction of highly charged glass spheres with their mirror charges on a metal surface. 
+Coulomb attraction is only important during the latest approach of tens of micrometer, not relevant here. As we average over many particles far apart, as we do not see the formation of really aggregates sticking together, we consider this to be not important here.
+We did put in some of this into the caveat section.
+
+
+(b) I can see why tightly coupled particles are useful for prolonging their suspension time and for subtracting off the gas velocity directly. However, the streaming instability occurs for inertial particles that are only moderately coupled to the gas; recall that particles drift in a protoplanetary disc (both radially and azimuthally) precisely because they are not well coupled.
+
+Reply: o.k. Point taken. But please recall that the coupling of micrometer grains in Capelo is on the same order.
+
+
+
+3.6 Although these parameters are defined in the previous section, there is no detailed information here about how one arrives at them directly from the measurements. For example, when distinctions are made in dust to gas density ratio for initial, final, and local, how is the volume (V in the denominator of equation 11) partitioned and defined in each case? What is the error on the gas pressure measurement?
+
+Reply: More information has been included in text and table.
+
+3.7 Later in this document, it is mentioned that there is a complication in determining the bulk density of the particles; this should be stated and explained here, together with a discussion of the consequent errors on the dust-to-gas density, friction time, and Stokes number.
+
+Reply: Added
+
+3.8 It would be informative to add the Rossby number and large-scale (calculated with the system diameter, I assume the one given here is only for particle diameter) Reynold's number to these parameters.
+
+Reply: Re_setup is added to table 1. We did not put in a Rossby number, since there is no Coriolis force. We do not have a radial drift but gravity and consider the lab coordination system. 
+Nevertheless, with U = tau * Omega^2 R, the Rossyby number is Ro=U/(Omega R)=tau*Omega. This is the Stokes number (table 1).
+
+
+
+
+########
+4 Grain motion
+
+4.1 The authors write "Grains in steady state sedimentation should move on circular orbits in the laboratory reference frame, with v_rel=t_fg relative to the gas."
+
+I am puzzled by this statement. It sounds like the authors are considering the expected particle trajectories to be the linear combination of rigid body rotation and terminal velocity for a particle in a static gas. I do not see how it can be, but maybe they do not mean this either. This is why I think it is very important to be extremely explicit and formal in describing how the velocities are derived from the data and what is the exact solution to the equation of motion (see points 2.5 and 3.2 above).
+
+Reply: Yes that is what we consider and this is what we observe.
+There is no room for speculation. Also, it was the result of Klahr and Henning 1997. 
+In response to points above, we included some more details already. 
+
+4.2 The authors write "The calculated sedimentation velocity for an average particle is 50 mm/s, but this bears uncertainties e.g. in bulk density, which is not well constrained. We therefore determined the sedimentation velocity of a single grain by dropping individual grains in gas of the same pressure used here and find a sedimentation velocity of 69 mm/s, roughly consistent with the calculated value. "
+
+I do not understand why 50 mm/s and 69 mm/s are consistent. This discrepancy is more than 1/3 of the scale on the y-axis on figure 8 and more than half of the y-axis scale on figure 11. This drop experiment seems like an important calibration. Were the particle sizes well characterized and could the bulk density not be constrained that way? Could there be confusion due to the fact that the authors are expecting equation 6 to hold for the residual downward velocity component and find a discrepancy?
+
+Reply: Uncertainty means that the manufacturer is not explicit about it but only provides a rough number for several products. This does not mean this sample varies that strong but that it was not determined well. So, right, we used the drop experiment to calibrate that as we wrote in the text. Everything else is self-consistent then. 
+
+4.3 Figure 8 (together with figure 12) is the main result of this work. It would be nice to know more about this figure. The symbols must be the measured values, but what are the lines? Are they fits? The data at early times cross 3-4 such lines. Is there any explanation for this?
+
+Reply: We agree that fig. 8 is the main result (together with fig 9, fig 12 not so much).
+We added that the lines are linear fits. Obviously, the linear dependence is only first order. We do not know where the deviations come from... Challenge for simulations.
+
+4.4 It is not obvious how the sensitivity factor in equation 13 is extracted. Is it the slope of the lines in figure 8? Later in the discussion the authors refer to 'inclination' of the sensitivity factor. Is inclination synonymous with the slope of these lines or does inclination refer to the deviation from linear behaviour by the data taken at early times in figure 8?
+
+Reply: O.k. We obviously did not make this clear. Sensitivity factor is the slope of the lines. This slope itself is linear on dust to gas ratio then. We changed the wording.
+
+4.5 The authors write: "This does not imply an instability with steadily growing particle number as grains can also drop out of high closeness regions."
+
+I think this is an excellent point, and it should be emphasised, since the idea of a transition to collective motion given by the sensitivity factor analysis could easily be mistaken to mean that the authors are reporting the onset of a fluid instability. Clearly, the observed transition cannot be a growing instability because (1) the time evolution is backwards: the dense, supposedly unstable state is first in time and the dilute supposedly stable state is last, and (2) a bigger concern of mine is that typically a linear instability should emerge from a steady background state. If the authors are looking for instability onset in the formal sense, then waves should occur and one can make a comparison of the expected wavelength and rate of onset from analytical theory (or in some numerical studies, the streaming instability is tracked from onset to saturation by the local increase in epsilon over the mean background value). Instead, the impression given together by figures 5 (initially flat, then steeply declining dust to gas ratio), 8 (steep slope in settling velocity at early times), and 10 (circulation patterns), is that the heavy sedimentation and mixing flow patterns are being observed during a transient state when the system is turned on and has not yet relaxed to a steady state.
+
+Reply: We agree to most of this. But it is not that the system is not yet relaxed. It is just centrifugal force which drives particles outwards over time, resulting in less dense clouds and different motion of "closer" regions. I don't think we need to put more emphasise on any aspect. It is all there.
+
+4.6 Almost all of the figures in this section could use more explanation. For example:
+
+(a) Figure 4 seems to have been taken with a microscope. Is this true? What medium are the particles in?
+
+Reply: changed in document to " Microscopic Image of the hollow glass spheres used. The beads are placed on a microscopic slide."
+
+
+(b) Figure 5 has coloured dots that are not explained in the figure caption.
+
+Reply: Added.	 
+
+(c) In Figure 6, the direction of rotation should be indicated and the total time of the composite tracks as well. I do not understand why these trajectories are described as 'circular' in the caption. If they were, they would not overlap. They are not even closed orbits and many of the particles are on a collision course with the wall.
+
+Reply: The direction of rotation is not really important. The problem is symmetric. We put it in anyway on request. These trajectories are pretty circular for common sense. Two particles can be on different circular orbits if their sedimentation velocity is different which is the whole point of this study. This leads to a range of circle centers on the horizontal axis. It is not a problem that circles overlap and does not imply collisions but it leads to changing closeness and evolution in sedimentations. We extended the fig. caption.
+
+
+(d) In Figure 7, it is not obvious how an absolute size scale in millimetres can be put onto the projected 2-d particle positions.
+
+Reply: The depth of view is comparably small so that there is only a perspective effect below the 1% level (essentially, this is telecentric). This is negligible and allows one scale bar.
+
+(e) In figure 10, it is not clear what the colour scale means nor whether the trajectories correspond to measurements or are drawn on for illustration purposes.
+
+Reply: Added to caption.
+
+(f) I am not sure what we are meant to learn from figures 11 or 14, because there is no explanation for them.
+
+Reply: Fig. 11 is just an example, what an individual particle does. For an experimentalist this is important as we can track all particles through their evolution (even though so far only in 3d). We included some text to fig. 14 which is actually important (see below).
+
+
+
+
+
+4.7 There is not a lot of data used in this analysis (later it is also written that there is only one experiment done) and so I am not sure if these results can be considered statistically converged. If figure 12 is plotted as probability distribution instead of a histogram, it will tell whether there is enough data to show the significance of the result, or not.
+
+Reply:  
+A probability distribution and a histogram are the same thing but scaled by a factor and the one is discrete the other not. Experiments only give histograms. We could put in a smooth line on top but that would be pointless.
+Yes, granted, we only analyzed one experiment in detail.
+
+
+
+
+########
+5 Summary
+
+5.1 Here the authors introduce a new expression and do not explain its meaning. They give an alpha coefficient with numerical value without telling how this number was derived from their data. I do not know what to make of this. It needs to be explained and it does not belong in the summary, which should be a recap of concepts/findings thoroughly explained before.
+
+Reply: We introduce that in an earlier section and only repeat this here as this is one of the major results.
+
+########
+6 Discussion
+
+6.1 The authors give epsilon=0.08 as a threshold value for the onset of collective motion. Currently, the value of epsilon in this study is not well constrained; the authors express uncertainty about the bulk density of their particles, they appear to be measuring average column densities (but this is not too clear), and the particle diameters are polydisperse. This is to say nothing of the spatial gradient in epsilon due to the asymmetry of the particle trapping mechanism. I do not think a strict threshold can be given as a result.
+
+Reply: As mentioned above already, our grains are perfect spheres. The size is fixed to better than 10%!
+This is definitely not polydisperse for the given purpose. Again, Capelos particles varied in size by large factors, not determined better at all. The bulk density of the grains is not unconstrained. We clearly state in the document that we give average column densities but that is one of the points, that the total dust to gas influences the local particle motion depending on the local dust to gas. All uncertainties for epsilon are given. The summary states that 0.08 might not be taken literally yet but we note the upper boundary for that value.
+
+
+6.2 The authors write "The influence of the closeness on the sedimentation velocity is reminiscent of similar findings on sedimenting clouds in the Stokes Regime".
+
+The particle-cloud break-up phenomenon of which they speak is not the only multi-particle behaviour that depends directly upon closeness: see 2.6 above. The authors describe the velocity field as fluctuating on several occasions in this draft. They may try to compare the dispersion in the fluctuations to the mean settling velocity to try rule out the probability that they are simply reproducing this well-known result.
+
+Reply: Good point. This is where fig. 14 actually gets important. In fact, our data show that the ratio between width of the velocity distribution and the average velocity does not change for quite a range of epsilon but strongly for the first really dense rounds.
+This ratio corresponds in large parts to the width of our grains size, which is about 10% or full width 20%. Here, we measure about 35% in the velocity variation. At the low filling factor the constant behavior is in agreement to other experimental work (cited) though these are still completely different regimes and we are always caution to compare apples with pears. Anyway, little was said here and we added a paragraph.
+
+########
+7 Caveats and future work
+
+7.1 These caveats are appreciated. However, I believe that the authors need to narrow their focus to demonstrating the accuracy and reliability of their measurements and data analysis, the statistical significance of their result, and this study's relevance to the drafting mechanism associated with the streaming instability, so that such a long list of caveats is not needed.
+
+Reply: We fear we have to disagree strongly on that. Ever designed a new experiment? This is not like just turning a number in a simulation. But the data analysis is clear and accurate and reliable. The results are significant and there is nothing wrong with the caveat list. That is just good practice.

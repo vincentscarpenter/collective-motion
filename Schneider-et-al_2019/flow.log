@@ -1,0 +1,589 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/TeX Live for SUSE Linux) (preloaded format=pdflatex 2018.10.12)  15 JAN 2019 19:15
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**flow.tex
+(./flow.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/share/texmf/tex/latex/base/fix-cm.sty
+Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
+
+(/usr/share/texmf/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)) (./svjour3.cls
+Document Class: svjour3 2007/05/08 v3.2 
+LaTeX document class for Springer journals
+(/usr/share/texmf/tex/latex/base/fleqn.clo
+File: fleqn.clo 2016/12/29 v1.2a Standard LaTeX option (flush left equations)
+\mathindent=\dimen102
+Applying: [2015/01/01] Make \[ robust on input line 50.
+LaTeX Info: Redefining \[ on input line 51.
+Already applied: [0000/00/00] Make \[ robust on input line 62.
+Applying: [2015/01/01] Make \] robust on input line 74.
+LaTeX Info: Redefining \] on input line 75.
+Already applied: [0000/00/00] Make \] robust on input line 83.
+)
+Class Springer-SVJour3 Info: extra/valid Springer sub-package (-> *.clo) 
+(Springer-SVJour3)           not found in option list of \documentclass
+(Springer-SVJour3)           - autoactivating "global" style.
+ (./svglov3.clo
+File: svglov3.clo 2009/12/18 v3.2 style option for standardised journals
+
+SVJour Class option: svglov3.clo for standardised journals
+)
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 149.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 150.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 151.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 152.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 153.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 155.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 156.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 157.
+\logodepth=\dimen103
+\headerboxheight=\dimen104
+\betweenumberspace=\dimen105
+\aftertext=\dimen106
+\headlineindent=\dimen107
+\c@inst=\count79
+\c@auth=\count80
+\instindent=\dimen108
+\authrun=\box26
+\authorrunning=\toks14
+\titrun=\box27
+\titlerunning=\toks15
+\combirun=\box28
+\c@lastpage=\count81
+\rubricwidth=\dimen109
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\spthmsep=\dimen110
+\c@theorem=\count87
+\c@case=\count88
+\c@conjecture=\count89
+\c@corollary=\count90
+\c@definition=\count91
+\c@example=\count92
+\c@exercise=\count93
+\c@lemma=\count94
+\c@note=\count95
+\c@problem=\count96
+\c@property=\count97
+\c@proposition=\count98
+\c@question=\count99
+\c@solution=\count100
+\c@remark=\count101
+\c@figure=\count102
+\c@table=\count103
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\figcapgap=\dimen111
+\tabcapgap=\dimen112
+\figgap=\dimen113
+\bibindent=\dimen114
+\@tempcntc=\count104
+) (/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texmf/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/share/texmf/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count105
+))
+\Gin@req@height=\dimen115
+\Gin@req@width=\dimen116
+)
+(/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/share/texmf/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/share/texmf/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen117
+\lightrulewidth=\dimen118
+\cmidrulewidth=\dimen119
+\belowrulesep=\dimen120
+\belowbottomsep=\dimen121
+\aboverulesep=\dimen122
+\abovetopsep=\dimen123
+\cmidrulesep=\dimen124
+\cmidrulekern=\dimen125
+\defaultaddspace=\dimen126
+\@cmidla=\count106
+\@cmidlb=\count107
+\@aboverulesep=\dimen127
+\@belowrulesep=\dimen128
+\@thisruleclass=\count108
+\@lastruleclass=\count109
+\@thisrulewidth=\dimen129
+)
+(/usr/share/texmf/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count110
+\output=\toks17
+\linenoprevgraf=\count111
+\linenumbersep=\dimen130
+\linenumberwidth=\dimen131
+\c@linenumber=\count112
+\c@pagewiselinenumber=\count113
+\c@LN@truepage=\count114
+\c@internallinenumber=\count115
+\c@internallinenumbers=\count116
+\quotelinenumbersep=\dimen132
+\bframerule=\dimen133
+\bframesep=\dimen134
+\bframebox=\box29
+LaTeX Info: Redefining \\ on input line 3056.
+)
+(/usr/share/texmf/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count117
+) (./flow.aux)
+\openout1 = `flow.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+
+Unknown journal: specify \journalname{<name of your journal>} in preambel
+
+(/usr/share/texmf/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count118
+\scratchdimen=\dimen135
+\scratchbox=\box30
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen136
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks19
+) (/usr/share/texmf/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texmf/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texmf/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texmf/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texmf/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/share/texmf/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texmf/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texmf/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texmf/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+SVJour3 warning: Missing \journalname
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 121.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 121.
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 121.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8.5> on input line 121.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.94997> on input line 121.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.25> on input line 121.
+
+Underfull \vbox (badness 3219) has occurred while \output is active []
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+Overfull \hbox (8.7862pt too wide) in paragraph at lines 162--165
+[]\OT1/cmr/m/n/10 However, no other ex-per-i-men-tal ap-proaches to stream-
+ []
+
+[2]
+Overfull \hbox (2.06104pt too wide) in paragraph at lines 235--237
+\OT1/cmr/m/n/10 In tur-bu-lence, $\OML/cmm/m/it/10 ^^\[]$ \OT1/cmr/m/n/10 usu-a
+lly de-scribes the cor-re-la-tion time
+ []
+
+
+Overfull \hbox (3.81143pt too wide) in paragraph at lines 235--237
+\OT1/cmr/m/n/10 take $\OML/cmm/m/it/10 ^^\[]$ \OT1/cmr/m/n/10 to be the ro-ta-t
+ional timescale $\OML/cmm/m/it/10 ^^\[] \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 =\O
+T1/cmr/m/n/10 (2\OML/cmm/m/it/10 ^^Yf\OT1/cmr/m/n/10 ) =
+ []
+
+[3]
+
+pdfTeX warning: pdflatex (file ./closeness2.pdf): PDF inclusion: found PDF vers
+ion <1.7>, but at most version <1.5> allowed
+<closeness2.pdf, id=24, 845.54291pt x 375.86823pt>
+File: closeness2.pdf Graphic file (type pdf)
+ <use closeness2.pdf>
+Package pdftex.def Info: closeness2.pdf used on input line 286.
+(pdftex.def)             Requested size: 238.96417pt x 106.22311pt.
+
+Underfull \vbox (badness 4001) has occurred while \output is active []
+
+ [4 <./closeness2.pdf>]
+
+pdfTeX warning: pdflatex (file ./eddy.pdf): PDF inclusion: found PDF version <1
+.7>, but at most version <1.5> allowed
+<eddy.pdf, id=33, 770.88pt x 578.16pt>
+File: eddy.pdf Graphic file (type pdf)
+ <use eddy.pdf>
+Package pdftex.def Info: eddy.pdf used on input line 309.
+(pdftex.def)             Requested size: 238.96417pt x 179.21892pt.
+
+
+pdfTeX warning: pdflatex (file ./setup.pdf): PDF inclusion: found PDF version <
+1.7>, but at most version <1.5> allowed
+<setup.pdf, id=34, 617.46683pt x 595.94145pt>
+File: setup.pdf Graphic file (type pdf)
+ <use setup.pdf>
+Package pdftex.def Info: setup.pdf used on input line 314.
+(pdftex.def)             Requested size: 238.96417pt x 230.63394pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--342
+
+ []
+
+
+Underfull \vbox (badness 1303) has occurred while \output is active []
+
+
+
+pdfTeX warning: pdflatex (file ./hollow.pdf): PDF inclusion: found PDF version 
+<1.7>, but at most version <1.5> allowed
+<hollow.pdf, id=35, 796.1173pt x 595.3673pt>
+File: hollow.pdf Graphic file (type pdf)
+ <use hollow.pdf>
+Package pdftex.def Info: hollow.pdf used on input line 351.
+(pdftex.def)             Requested size: 238.96417pt x 178.70241pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./eddy.pdf> <./setup.pdf>] [6 <./hollow.pdf>]
+
+pdfTeX warning: pdflatex (file ./density2.pdf): PDF inclusion: found PDF versio
+n <1.7>, but at most version <1.5> allowed
+<density2.pdf, id=55, 752.8125pt x 496.85625pt>
+File: density2.pdf Graphic file (type pdf)
+ <use density2.pdf>
+Package pdftex.def Info: density2.pdf used on input line 453.
+(pdftex.def)             Requested size: 238.96417pt x 157.71599pt.
+ [7]
+
+pdfTeX warning: pdflatex (file ./round1.pdf): PDF inclusion: found PDF version 
+<1.7>, but at most version <1.5> allowed
+<round1.pdf, id=60, 746.0131pt x 595.64433pt>
+File: round1.pdf Graphic file (type pdf)
+ <use round1.pdf>
+Package pdftex.def Info: round1.pdf used on input line 476.
+(pdftex.def)             Requested size: 238.96417pt x 190.79185pt.
+
+Overfull \hbox (4.3558pt too wide) in paragraph at lines 470--484
+\OT1/cmr/m/n/10 ve-loc-ity, a bulk den-sity of ap-prox-i-mately 75 $kg\OML/cmm/
+m/it/10 =\OT1/cmr/m/n/10 m[]$ would
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+pdfTeX warning: pdflatex (file ./density.pdf): PDF inclusion: found PDF version
+ <1.7>, but at most version <1.5> allowed
+<density.pdf, id=61, 662.92767pt x 597.72209pt>
+File: density.pdf Graphic file (type pdf)
+ <use density.pdf>
+Package pdftex.def Info: density.pdf used on input line 495.
+(pdftex.def)             Requested size: 238.96417pt x 215.4534pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <./density2.pdf> <./round1.pdf>]
+<Runde_1-3_mit_angepassten_Fits_II.pdf, id=71, 1104.125pt x 720.6925pt>
+File: Runde_1-3_mit_angepassten_Fits_II.pdf Graphic file (type pdf)
+
+<use Runde_1-3_mit_angepassten_Fits_II.pdf>
+Package pdftex.def Info: Runde_1-3_mit_angepassten_Fits_II.pdf used on input li
+ne 508.
+(pdftex.def)             Requested size: 238.96417pt x 155.97957pt.
+
+<Runde_4-9_IV.pdf, id=72, 1104.125pt x 719.68875pt>
+File: Runde_4-9_IV.pdf Graphic file (type pdf)
+ <use Runde_4-9_IV.pdf>
+Package pdftex.def Info: Runde_4-9_IV.pdf used on input line 509.
+(pdftex.def)             Requested size: 238.96417pt x 155.76233pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<sense1.pdf, id=73, 717.54224pt x 458.54239pt>
+File: sense1.pdf Graphic file (type pdf)
+ <use sense1.pdf>
+Package pdftex.def Info: sense1.pdf used on input line 533.
+(pdftex.def)             Requested size: 238.96417pt x 152.70482pt.
+
+<sense2.pdf, id=74, 712.94867pt x 461.04604pt>
+File: sense2.pdf Graphic file (type pdf)
+ <use sense2.pdf>
+Package pdftex.def Info: sense2.pdf used on input line 534.
+(pdftex.def)             Requested size: 238.96417pt x 154.53052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./density.pdf> <./Runde_1-3_mit_angepassten_Fits_II.pdf> <./Runde_4-9_IV.pd
+f
+
+pdfTeX warning: pdflatex (file ./Runde_4-9_IV.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+>]
+
+pdfTeX warning: pdflatex (file ./track1.pdf): PDF inclusion: found PDF version 
+<1.7>, but at most version <1.5> allowed
+<track1.pdf, id=122, 848.58932pt x 202.82274pt>
+File: track1.pdf Graphic file (type pdf)
+ <use track1.pdf>
+Package pdftex.def Info: track1.pdf used on input line 552.
+(pdftex.def)             Requested size: 238.96417pt x 57.11493pt.
+
+
+pdfTeX warning: pdflatex (file ./track2.pdf): PDF inclusion: found PDF version 
+<1.7>, but at most version <1.5> allowed
+<track2.pdf, id=123, 848.58932pt x 202.82274pt>
+File: track2.pdf Graphic file (type pdf)
+ <use track2.pdf>
+Package pdftex.def Info: track2.pdf used on input line 553.
+(pdftex.def)             Requested size: 238.96417pt x 57.11493pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 2735) has occurred while \output is active []
+
+
+<single_Track.pdf, id=124, 853.50871pt x 542.025pt>
+File: single_Track.pdf Graphic file (type pdf)
+ <use single_Track.pdf>
+Package pdftex.def Info: single_Track.pdf used on input line 571.
+(pdftex.def)             Requested size: 238.96417pt x 151.74942pt.
+
+[10 <./sense1.pdf> <./sense2.pdf
+
+pdfTeX warning: pdflatex (file ./sense2.pdf): PDF inclusion: multiple pdfs with
+ page group included in a single page
+> <./track1.pdf> <./track2.pdf> <./single_Track.pdf
+
+pdfTeX warning: pdflatex (file ./single_Track.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+>]
+
+pdfTeX warning: pdflatex (file ./veloc2and9.pdf): PDF inclusion: found PDF vers
+ion <1.7>, but at most version <1.5> allowed
+<veloc2and9.pdf, id=222, 752.8125pt x 512.66531pt>
+File: veloc2and9.pdf Graphic file (type pdf)
+ <use veloc2and9.pdf>
+Package pdftex.def Info: veloc2and9.pdf used on input line 579.
+(pdftex.def)             Requested size: 238.96417pt x 162.73422pt.
+
+
+pdfTeX warning: pdflatex (file ./close259.pdf): PDF inclusion: found PDF versio
+n <1.7>, but at most version <1.5> allowed
+<close259.pdf, id=223, 752.8125pt x 512.66531pt>
+File: close259.pdf Graphic file (type pdf)
+ <use close259.pdf>
+Package pdftex.def Info: close259.pdf used on input line 585.
+(pdftex.def)             Requested size: 238.96417pt x 162.73422pt.
+
+
+pdfTeX warning: pdflatex (file ./fwhm_velocity.pdf): PDF inclusion: found PDF v
+ersion <1.7>, but at most version <1.5> allowed
+<fwhm_velocity.pdf, id=224, 752.8125pt x 502.87875pt>
+File: fwhm_velocity.pdf Graphic file (type pdf)
+ <use fwhm_velocity.pdf>
+Package pdftex.def Info: fwhm_velocity.pdf used on input line 597.
+(pdftex.def)             Requested size: 238.96417pt x 159.6277pt.
+
+
+pdfTeX warning: pdflatex (file ./sd_close.pdf): PDF inclusion: found PDF versio
+n <1.7>, but at most version <1.5> allowed
+<sd_close.pdf, id=225, 752.8125pt x 496.85625pt>
+File: sd_close.pdf Graphic file (type pdf)
+ <use sd_close.pdf>
+Package pdftex.def Info: sd_close.pdf used on input line 598.
+(pdftex.def)             Requested size: 238.96417pt x 157.71599pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11 <./veloc2and9.pdf> <./close259.pdf>] [12 <./fwhm_velocity.pdf> <./sd_close.
+pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (7.89516pt too wide) detected at line 681
+$ \OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 + \
+OML/cmm/m/it/10  \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^O \O
+MS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^O[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^A
+ \OML/cmm/m/it/10 C [] \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 15 \O
+MS/cmsy/m/n/10 ^^U \OML/cmm/m/it/10 ^^O \OMS/cmsy/m/n/10 ^^U \OML/cmm/m/it/10 ^
+^O[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 08\OML/cmm/m/it/10 :[
+]$ []
+ []
+
+
+Overfull \hbox (1.03616pt too wide) in paragraph at lines 698--702
+[]\OT1/cmr/m/n/10 There might be in-ter-est-ing physics in the dense (high
+ []
+
+[13]
+Overfull \hbox (7.70297pt too wide) in paragraph at lines 712--716
+\OT1/cmr/m/n/10 ity. Charg-ing is cer-tainly im-por-tant dur-ing stick-ing even
+ts
+ []
+
+
+Overfull \hbox (2.75844pt too wide) in paragraph at lines 712--716
+\OT1/cmr/m/n/10 (Lee et al., 2015). We did not ob-serve tra-jec-to-ries though
+ []
+
+
+Overfull \hbox (5.45572pt too wide) in paragraph at lines 739--741
+[]\OT1/cmr/m/n/8.5 This project is sup-ported by DFG grant
+ []
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ƒ in font cmr10!
+Missing character: There is no Â in font cmr10!
+Missing character: There is no © in font cmr10!
+[14]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+
+Underfull \hbox (badness 1824) in paragraph at lines 894--895
+[]\OT1/cmr/m/n/10 Schreiber, A., & Klahr, H. 2018, arXiv preprint
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+(./flow.aux) ) 
+Here is how much of TeX's memory you used:
+ 3091 strings out of 492995
+ 45184 string characters out of 6141052
+ 111772 words of memory out of 5000000
+ 6604 multiletter control sequences out of 15000+600000
+ 11472 words of font info for 40 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,10n,33p,1313b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr
+/share/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/fonts/
+type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texmf/fonts/type1/public/amsfont
+s/cm/cmbx8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf/fonts
+/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/share/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/
+type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sh
+are/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/typ
+e1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
+are/texmf/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/typ
+e1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/c
+m/cmtt10.pfb>
+Output written on flow.pdf (15 pages, 5667233 bytes).
+PDF statistics:
+ 320 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+

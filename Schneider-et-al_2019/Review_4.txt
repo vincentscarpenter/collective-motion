@@ -1,0 +1,37 @@
+############
+Referee:
+-	The way this experiment works, as well as the fact that only one run is analyzed here, does not convincingly support the presented results. These results are summarized in section 6 by equations 25 and 26. Due to the fact that the dust-to-gas ratio (DGR) of the system naturally evolves during the experiment run due to the loss of particles and clumps to the chamber walls, the observed evolution of the system (and in particular quantities such as the closeness and sedimentation velocity) could be attributed to e.g. the settling of the system after the beginning of the chamber rotation. Validation of the results presented here would require a system that can either hold a given DGR at different values, including higher ones, or several experiment runs in both the current configuration and a configuration in which the DGR is controllably increased during the experiment run. The authors mention both these points in the discussion section, but qualify them as future work, while I see them as necessary to validate the results currently presented in this paper.
+
+Reply: 
+We understand the reviewer but would disagree in parts. First, closeness and sedimentation velocity cannot be attributed to the settling of the experiment. This is not an artifact.
+To demonstrate that, we included one more track of an individual grain, in fact from early times. The grain moves up and down in closeness space several times. At the same time the grain always adapts instantly to this changing closeness with a respective change in sedimentation velocity. 
+We added a paragraph on this. So the relation between sedimentation velocity
+and closeness (increasing speed with increasing closeness) is not just a snapshot of a settling system but the relation is a real one. 
+We also note that there are a number of experiments on sedimentation by other authors (cited in the introduction) only tracking 1 or 2 particles, while we track a few hundred for a longer timescale. 
+So there is no problem with only a single experiment analyzed. 
+Second, we agree that the „model" (eq. 25, 26) based on the linear trends
+(see major point 2) did not get clear and we modified this plot and added 
+text (see below). 
+
+
+
+
+Referee:
+-	The definition of the sensitivity factor is derived from dubious linear fits in Fig. 8. In particular at high DGR, i.e. early in the experiment run, significant deviations of the data points from the proposed fits at lower closeness numbers are not addressed nor quantified in the paper. As this sensitivity factor is a key point in equation 26, these liberal linear fits do not convincingly support the paper results. Also, the sensitivity factor break-off point as shown in Fig. 9 seems to be supported by just one data point, which itself relies on a linear fit of only 4 data points, one of which is an outlier (see Fig. 8). No good rationale is given for the choice of 0.08 for the value of the critical DGR: as the transition around this critical value is of importance for the statement that the presented experiment setup is able to distinguish between Knudsen and Stokes regimes, the estimation of the 0.08 value requires more measurements of the sensitivity factor around that value. As is, the transition is not convincingly presented.
+
+Reply: 
+Agreed. We redesigned this section. We split fig. 8 in 2 plots now,
+one for the later measurements and one plot for the first rounds.
+The later measurements are still fitted linearly. The rationale for the common
+origin is that this is the sedimentation velocity of an isolated grain.
+It cannot be more nor less. There are a few outliers at lower closeness values for each set of data. These are due to some small grains being present, which have different stability points coming with the lowest closeness and due to their small size they have generally lower sedimentation velocities. 
+We explain this now. As far as the break-off point is concerned.
+This is not just one data point. As stated in the paper, we grouped all of our data points to give an overview over all data points. The one data point represents 50000 real data points.
+As mentioned above, the sedimentation velocity cannot be lower than for an individual grain. So in fact, no point at all would be needed here. It cannot be lower than 0. Certainly the sensitivity factor might approach slightly different but extrapolating the linear trend is 
+pretty good practice and we hope with the separation of the early and late data this gets clearer now. As to the dubious linear fits. Indeed, the early data
+does not really fit. So the fit was only to the highest closeness data which we were interested in. But as already mentioned and seen in fig. 9 it does not
+fit the other data with respect to the relation with solid-to-gas-ratio. Therefore, we 
+keep the data in in a separate plot but put emphasis on the deviation.
+What the reason is, we do not know but that does not devalue the data.
+The trend from the later data which actually fit well is not touched by this.
+It only specifies an upper limit at which things might change.

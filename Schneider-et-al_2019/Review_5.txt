@@ -1,0 +1,84 @@
+Dear Editor, Dear Reviewer:
+
+many thanks for the effort put into this review and suggestions for further improvement of the manuscript. We went through the comments point by point as outlined below.
+
+Sincerely,
+
+Niclas Schneider 
+
+
+
+Referee Report
+Reviewer's Comments:
+Review comments, round 3
+
+
+-------------------------
+Referee:
+- First, and after reading your answers and seeing Fig. 12, I finally realized that each data point in Fig. 8 is the "compilation" of a large number of tracks/particles. This is essential for the validity of your results and the overall scientific interest of the paper. For some reason, it was not clear to me while reading the paper. I strongly recommend pointing this fact out more clearly for the reader, for example when first introducing Fig. 8, and/or in the section where data analysis is described.
+
+Reply: 
+We added a sentence in analysis and also in the caption of figure 8.
+
+-------------------------
+Referee:
+- I still have some issues with Fig.8. (1) Some linear fit ranges in Fig 8 (bottom) still need to be shortened/adjusted. There is a systematic and significant deviation from the fit for several rotations (the two bottom ones and the top one in particular). (2) How were the points in the figure binned? If each represents many particles at a certain closeness, then some choice of binning was performed. Please clarify. (3) The deviation from a linear fit is attributed to the presence of smaller grains. Is there any way to identify smaller grains from larger ones in your analysis method? I notice now that the camera resolution is not mentioned in the paper. What are the smallest grains that you can track and can you differentiate between smaller (1 px) and larger (several px)? Outliers due to smaller grains seem to systematically occur at lower closeness? Please comment on that.
+
+Reply:
+(1) We adjusted the fits in Fig 8 (bottom).
+
+(2) The minimum amount of DataPoints for each bin is 1000 but it can be more than 7000 (see caption in figure8). The number is chosen in each bin to have an equidistant spacing of the average values in closeness space. We added a note to the figure.
+
+(3) We added the camera resolution (1.3 megapixel, 123 µm/pixel) in section 1.3 Setup.
+
+Unfortunately, we cannot separate smaller grains from larger ones. Every particle is only about one pixel in resolution. To view the total chamber and therefore all particles comes with a limit in spatial resolution. There is no way around that. Experimentally, that is why the size distribution chosen is really small, so that we do not need to resolve individual grains.
+
+Our experiment is sensitive to sedimentation velocities of individual grains plus collective effects. While that is why almost identical particles (as good as possible to purchase) were used in the first place and while variations are then only due to collective effects, the small fraction is disturbing then.
+
+As the stability points of all grains are off-center, there is a space in the chamber that is devoid of normal grains.
+The small grains are more stable, so their stability point is closer to the center of the chamber. Therefore they can fill space in the chamber that is per definition devoid of normal grains. This is then naturally a space of low closeness only accessible by the small fragments. That means it just samples grains outside of hard boundaries of regular grains. So the fraction of small grains shows up at smallest closeness.
+
+These small closenesses especially sample that special space of the chamber but this does not influence the main part of the chamber and main part of the closenesses found throughout the chamber. We cannot get rid of this „pollution“ easily though. We might just have left out the smallest closeness bins for that reason but did not want to correct the data artificially for this as not to manipulate the data just on these arguments so we just did put in a note.
+
+As this did not get clear we added a sentence more.
+
+
+
+-------------------------
+Referee:
+- Fig. 9: Please add a sentence explaining that the turnover point in this figure is due to crossing of the 0 line, which determines the listed values (this sentence could go between equations 21 and 22).
+
+Reply:
+We added two sentences on this.
+
+
+-------------------------
+Referee:
+- Fig. 12: this is a great addition, but it makes Fig 11 a bit obsolete. I think keeping figure 12 only would be enough, but I don't have a strong opinion on it.
+
+Reply:
+We agree. We removed Fig. 11 and combined our findings of both figures in one paragraph.
+
+
+-------------------------
+Referee:
+- The following explanation from the authors should be reflected with one or two sentences in the paper: "On the one hand, there is the long-range-hydrodynamic interaction (1/r), which seems to "add up" considering only a few particles. [...] For single particle tracks (see the new figure), the closeness is a very robust parameter describing the relation between sedimentation velocity and interparticle interaction." It will help the reader understand the fitting choice and evaluate the validity of it.
+
+Reply:
+We added a sentence on closeness in the paragraph of figure 11.
+
+
+
+-------------------------
+Referee:
+- "We do not loose dense clouds "immediately", but rather in the course of our experiment. We are aware that this is not in a controlled manner, but we see different behaviour for different regimes nonetheless. As explained in the caveats, we try to improve the experiment to limit the losses." Comment: what is the time frame of these losses compared to the time frame of the experiment run? It would help to know if the clumps migrate out within the first 10% of the experiment run or if they are around for 50% of the time for example. Also, I am assuming that this migration is clump-size dependent, and maybe that clumps grow as they migrate out? Therefore, the clump outward migration is actually accelerated? This part is very relevant, as indeed it mimics streaming the best. Please elaborate on it. I am assuming that you are able to track clumps, as you can identify close particles during the experiment. My understanding is that the sedimentation velocity studied in this paper is following the g vector to the bottom of the chamber. Do you also see any trends for radial outward velocities?
+
+
+Reply:
+We wish, we could put a finger to that question. Indeed, we had a lot of discussions regarding clumps in our experiments, because we agree that the migration of a clump would be very important.
+
+The main problem with clumps is, that we cannot define any clump properly. There just is no clear boundary, where you can tell that one clump starts and another ends, not even daring to find a definition of how some clump moves. The snapshot in figure 7 from an early time is coming closest to a clump. But it is still a rather continuous increase of particle density (closeness) towards the middle of these „clumps“. As particles can join and leave dense areas (see figure 10 or figure 11) these structures fluctuate strongly over more than one rotation and significant vary on smaller scales.
+
+A hint on the evolution time of dense regions is the plateau seen in figure 13 (blue histogram of early state). The plateau is lost after the first 3 rounds (as seen in figure 14, the plateau is the main reason for the high standard deviation), so this kind of gives the time frame for loosing the densest regions in about 30% of the experiment time. But as we do not define clump (that’s why we introduced closeness of each grain) this is not a good number. So we would like to not put it in the manuscript.
+
+There should be a radial increase in velocity but this is not detectable within the limits of our experiment with the fluctuations given.

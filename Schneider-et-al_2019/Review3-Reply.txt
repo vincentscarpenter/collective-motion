@@ -1,0 +1,42 @@
+Dear Editor, Dear Dr. Savin,
+
+we appreciate the very detailed review of our manuscript and changed it along the lines of the review, which should help to improve in readability and clarity.
+
+Sincerely
+The authors
+
+
+
+
+
+
+
+Dear Referee,
+
+thank you very much for the detailed review. 
+We changed the order of chapter Grain-Gas Interaction and Experiment. Now, the theory and parameters are explained first and the experiment is described afterwards. The section "Experiment" is explained in more detail. We separated the Setup, Procedure and Analysis and gave further descriptions and explanations. 
+
+We changed the manuscript along the lines of criticism. Attached you will find the PDF with your remarks and details of our changes.
+
+Thank you again for your report.
+Best regards
+the autors
+
+
+----------------------------------------------------------------------
+Referee Report
+Reviewer's Comments:
+This paper describes a novel experiment setup to study particle-gas interactions in the context of early planet formation and dust behavior in protoplanetary disks. The authors report of data collected during one experiment run using this new setup and establish a relationship between the particle sedimentation velocity, the closeness of particles in a cloud and the dust-to-gas ratio.
+
+The topic addressed by the described experiment is compelling and the objective of this effort is important, supporting numerical simulations of dust-gas interactions with laboratory observations. However, the paper in its current form does not convey a sound understanding of the experimental setup and runs, nor of the validity of the data analysis and results. Before publication, a number of points should be addressed. In addition to the provided annotated PDF, in which I list details on clarifications required, the following three major points need to be considered:
+
+1. The overall structure of the paper should be revised. Many variables or terms are mentioned and used well in advance of their definition, leading to confusion and conveying the impression that the work performed was not well thought through. I strongly recommend structuring the paper by first stating the objectives of the experiment, then how these objectives lead to the choice of experimental parameters (like chamber size, rotation speed, grain size etc), and finally how these parameters were implemented in the present experiment, also discussing various trade-offs, assumptions, and neglections that had to be made. In its current state, the description of the setup and results does not reflect the use of scientific procedures in designing and operating laboratory experiments.
+
+
+
+2. The experiment description lacks a number of crucial pieces of information, including quantitative numbers (gas pressure, timing, etc.), details of the experiment procedure, the number and description of experiment runs, and a better description of the data collected (number of particles that were detected by TrackMate, number and length of tracks, etc.). Given the importance of particle detection for the results presented here, it is also essential that a more thorough description of the analysis method is provided. Without this information, it is very difficult to assess the validity of the results as described in later paragraphs of the paper. Once these important points have been clarified in the paper, a review of the results, discussion, and caveats will become possible.
+
+
+3. While addressing the astrophysical question of protoplanetary disk dust concentration during early stages of planet formation, the core of this paper is the description of a novel laboratory setup and the first data set collected. As such, there is little actual scientific discussion of results and the paper is more a description of a new device and how dust and gas behave in it, as the presented setup is expected to provide more results in the future. This generates the concern that the paper might be better suited for a publication in The Astrophysical Journal Supplemental Series rather than the main journal. However, this impression might be conveyed by the confusing paper structure and the lack of detail on the setup and data analysis (points 1 and 2 above), so that this concern should be addressed again after major revisions associated with these two points have been implemented.
+
+

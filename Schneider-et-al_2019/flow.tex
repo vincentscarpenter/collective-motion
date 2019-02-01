@@ -1,0 +1,948 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First comes an example EPS file -- just ignore it and
+% proceed on the \documentclass line
+% your LaTeX will extract the file if required
+%\begin{filecontents*}{example.eps}
+%%!PS-Adobe-3.0 EPSF-3.0
+%%%BoundingBox: 19 19 221 221
+%%%CreationDate: Mon Sep 29 1997
+%%%Creator: programmed by hand (JK)
+%%%EndComments
+%gsave
+%newpath
+  %20 20 moveto
+  %20 220 lineto
+  %220 220 lineto
+  %220 20 lineto
+%closepath
+%2 setlinewidth
+%gsave
+  %.4 setgray fill
+%grestore
+%stroke
+%grestore
+%\end{filecontents*}
+%
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+%\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+\documentclass[twocolumn]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+\usepackage{color}
+%
+% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
+%
+% insert here the call for the packages your document requires
+%\usepackage{latexsym}
+\usepackage{booktabs}
+
+%requested for editor please remove before print
+\usepackage{lineno}
+%\linenumbers
+\usepackage[round]{natbib}
+%
+% please place your own definitions here and don't use \def but
+% \newcommand{}{}
+%\newcommand{\CORR}[1]{{\color{red}#1}}
+
+
+\newcommand{\HCORR}[1]{{\color{red}#1}}
+
+%\newcommand{\CORR}[1]{{\bf #1}}
+
+%\newcommand{\CORR}[1]{{\it #1}}
+
+
+%\newcommand{\CORR}[1]{{#1}}
+
+%\newcommand{\CORR}[1]{{#1}}
+% Insert the name of "your journal" with
+% \journalname{myjournal}
+%
+
+
+
+
+
+
+
+\begin{document}
+
+\title{
+Dense Particle Clouds in Laboratory Experiments in Context of Drafting and Streaming Instability 
+%\CORR{Laboratory Experiments on the collective sedimentation behavior of Dense Particle Clouds} or \CORR{
+%Preparatory Experiments on the Streaming Instability in the Laboratory.
+%}
+}
+
+%
+% ^.
+\subtitle{Studying the Transition from Single Particle to Collective Particle Behavior in the Knudsen regime.}%the transition regime from Knudsen to Stokes drag.}
+
+\titlerunning{Dense Particle Clouds in Laboratory Experiments}        % if too long for running head
+
+\author{Niclas Schneider$^1$, Gerhard Wurm$^1$, Jens Teiser$^1$, Hubert Klahr$^2$, Vincent Carpenter$^2$}
+
+%\authorrunning{Short form of author list} % if too long for running head
+
+\institute{$^1$             University of Duisburg-Essen, Lotharstr. 1-21, 47057 Duisburg, Germany\\
+              Tel.: +49-(0)203-379-1641\\
+              Fax: +49-(0)203-379-1965\\
+              \email{niclas.schneider@uni-due.de}\\                   %  \\
+%             \emph{Present address:} of F. Author  %  if needed
+           \and 
+           $^2$   Max Planck Institute for Astronomy, K{\"o}nigstuhl 17, 69117 Heidelberg, Germany\\
+        Tel.:  +49-(0)6221-528-255\\
+        \email{klahr@mpia.de}
+}
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor 
+
+
+\maketitle
+
+\begin{abstract}
+
+{
+The streaming instability, as an example of instabilities driven by particle feedback on a gas flow, 
+has proven to play a major role in controlling the formation
+of planetesimals. Collective feedback via friction from particles to the gas flow, in which they are embedded, is known to trigger instabilities and
+has proven to play a major role in controlling the formation
+of planetesimals. These instabilities in protoplanetary disks occur at the transition from gas dominated to dust and ice particle dominated. 
+Here, we present experiments to approach this situation in the laboratory for particles in the Knudsen flow regime.
+In this experiments, we observe a particle cloud trapped for about 30 seconds in a rotating system under Earth's gravity.
+For average dust to gas ratios up to 0.08, particles behave like individual test particles. Their sedimentation speed is identical to that of a single free falling particle, even in locally denser regions.  
+However, for higher dust to gas ratios, the motion of particles becomes sensitive to clumping. Particles in locally denser regions now sediment faster. Their sedimentation speed then depends {linearly} on the overall dust to gas ratio. This clearly shows a transition from tracer like behavior to collective behavior. 
+Beyond {these} findings, these types of experiments 
+can now be used as a gauge to test 
+the particle feedback models in astrophysical hydro codes which are currently used for numerical simulations of streaming instabilities.}
+
+\keywords{}
+% \PACS{PACS code1 \and PACS code2 \and more}
+% \subclass{MSC code1 \and MSC code2 \and more}
+\end{abstract}
+
+\section{Introduction}
+In the core accretion model for planet formation, dust first has to be converted to kilometer sized planetesimals, which then accumulate via gravitational interaction into planetary embryos, the precursors of terrestrial planets as well as gas and ice giants.
+In the standard scenario, terrestrial planet formation starts from dust which is evolving through all size scales. Initially, dust growth is driven by mutual collisions \citep{blumwurm2008}. However, this growth gets stalled either at the {drift barrier \citep{Weidenschilling1977a}, the fragmentation barrier \citep{Birnstiel2012}} or the bouncing barrier \citep{zsom2010,Kelling2014,kruss2016,kruss2017}.
+
+One way to continue evolution is the gravitational collapse of the particle layer in the disk \citep{Safronov1969,Goldreich1973}. Dense particle layers with local dust to gas ratios of unity and above are subject to instabilities \citep{Weidenschilling1980} driven by the mutual coupling between gas and particles, which have an incommensurable equilibrium state \citep{1986Icar...67..375N}. These instabilities can be generalized as Resonant Drag Instabilities \citep{Squire2018SI}, of which the streaming instability plays a major role in regulating the onset of gravitational collapse \citep{Youdin2005, Johansen2015, simon2016, schreiber2018}. Only if particles are concentrated to the point where self-gravity starts to dominate over turbulent diffusion km-size planetesimals can form by gravitational collapse \citep{Johansen2007, 2011A&A...529A..62J, Johansen2015}.
+
+
+In general the numerical simulations show that high solid-to-gas ratios are required and that the gas-grain coupling times have to be comparable to the orbital timescales. E.g. \citet{bai2010} find the typical dust-to-gas ratio of 0.01 to be insufficient to concentrate solids to the limit of gravitational collapse.
+In any case, the scenario of {gravitational collapse regulated by} streaming instabilities is widely accepted as the standard way to connect to and take over from the preceding collisional growth phases of pebbles. However, laboratory experiments are essentially missing. 
+
+{The situation of a protoplanetary disk can certainly not be set up 1 to 1 in a laboratory setting. However, the motion of a dense cloud of particles over longer timescale can be accessed as described in this paper. It might answer basic questions, like under what conditions are particles only tracers of gas motion or when is a back reaction to the gas notable. Is this really only occurring at a dust to gas ratio of about 1? {What are the minimum dust to gas ratios needed to see collective effects? Is there a smooth or a sharp transition? How do density fluctuations develop in experiments? Are they stable or do they grow in amplitude?} As numerical codes describing large protoplanetary disks should be capable of reproducing small scale laboratory results, this also offers an opportunity to verify and improve numerical codes. So this is a first work in that direction.}
+
+{So far, only} \citet{Lambrechts2016} hinted at a potential experiment to study particle density fluctuations in the laboratory for sedimenting grains which they simulated in a static gas column. The related experiment was carried out by \citet{Capelo2018}. That work studied sedimenting grains in the upward draft of a gas flow on a microscopic level. 
+{According to  \citet{Capelo2018}, sedimentation velocities of particle pairs were affected within a vertical inter-particle distance of 4~mm. {Nevertheless, they only observed a small volume of 1 $\rm cm^3$ of a meter long 9 cm diameter tube making it impossible to study large-scale influences} and they generally observe low absolute particle numbers $\ll 50$. Also, the grains in their experiment had an unknown size distribution and there is a potential influence on continuous wall collisions in various ways, i.e. introducing inhomogeneities during redispersion. 
+%Therefore, up to 650 particles in a larger volume covering the whole experimental setup are observed to get a better insight in high particle loading.
+}
+%{but due to generally low dust to gas ratios no collective behavior of a larger number of grains could be observed. } 
+ 
+However, no other experimental approaches to streaming in low pressure gases are known to the authors.
+ Having a complex two fluid (particles and gas) problem, it is of highest interest to
+study in an experiment, how particle clouds really react {to changing dust to gas ratios.} 
+
+
+
+{Usually, {$\rm 100 \mu m$ particles fall to the bottom of a de\-ci\-me\-ter-sized vessel at low pressure on a timescale of only one second. Here, we are interested in long-time behaviour and in\-ter-par\-ticle influences to investigate possible particle concentration mechanisms over time as pre\-dic\-ted by Streaming or Drag Instabilities.} Therefore, ways to levitate grains are needed as e.g. the upward draft used by \citet{Capelo2018}. We use a different approach here. An experimental setup that allows the study of particle evolutions for {a} longer time in the laboratory in a more defined way is a rotating cylinder with the cloud of particles and gas within. The rotation axis has to be horizontal. In such a rotating cylinder with no-slip boundaries at the cylinder mantle, the gas motion in equilibrium is simply a rigid rotation together with the cylinder. Solid particles embedded in this cylinder still feel sedimentation. However, if their gas grain friction time is small compared to the rotation time, they can be considered to fall with terminal speed at all times. This terminal speed is always given relative to the gas. As the gas motion depends on the distance from the cylinder axis, so does the absolute motion of the grain in the laboratory reference frame.}
+In the up-drift part of the gas rotation, there is a stable point for a sedimenting particle, where its downward sedimentation speed and the upward gas velocity cancel each other.
+{Disturbing a particle from this equilibrium point leads to circular trajectories as shown below. This way particles can be trapped for {a} long time, mostly limited by centrifugal forces as also estimated below.}
+
+Such an experiment has been used before by \citet{blum1998} and \citet{PoppeBlum1997}, but for aggregation studies. This setup is inspired by the idea of particle trapping in convective eddies in protoplanetary disks as studied by \citet{klahr1997}. Details are given in the experiment section.
+
+
+In a simplified way, the situation that can be studied in the laboratory with the given setup is as follows. A larger grain takes longer to couple to a gas flow than a smaller grain and 
+sediments faster than the small grain.
+But how many small particles have to be how close to each other to act like a larger grain {as suggested by \citet{JohansenYoudin2007}}? 
+And how does increasing the overall dust to gas ratio influence the particle motion in this 
+%rotating 
+system? {Will "drafting", the attraction of particles in the wake of a particle clump, as outlined by \citet{Lambrechts2016} change the particle density and spontaneously form dense clumps?}
+
+{In section 2 we outline the basic gas-grain interactions and parameters describing clouds of particles especially in the experiments. We also introduce the closeness as parameter. Section 3 describes the experiment, its function and basic parameters. Section 4 gives the results of measurements of individual particles moving as part of a particle cloud. Section 5 adds some more discussion to the results. Section 6 is a short summary of the most important experimental findings. Being far from perfect we point out the caveats in section 7 and conclude in section 8.}
+
+
+\section{Grain-Gas Interaction}
+
+The motion of a single particle embedded in a gas is depending on the gas-grain coupling time or friction time $\tau_f$. 
+
+%It can be defined as
+
+%\begin{equation}
+%\tau_f = \frac{m}{F} \cdot v = a \cdot v
+%\end{equation}
+
+%where $F$ is the drag force acting on the particle of mass $m$ which moves relative to the gas with a speed $v$. The force accelerates the particle with acceleration $a$. 
+
+$\tau_f$ is only well defined (constant) in flows where the drag force is proportional to gas speed. This is valid for small Reynolds numbers, which is the case here {(see table \ref{para})}. In detail, the coupling time depends on the flow regime, which can be described by the Knudsen number $Kn$.
+The Knudsen number is the ratio between the mean free path length between the molecules $\lambda$ and the particle radius $r$,
+\begin{equation}
+Kn = \frac{\lambda}{r}
+\label{tau_no}
+\end{equation}
+For small $Kn\ll1$ the flow is continuous. For large $Kn\gg1$ the flow is molecular.
+For molecular flow, the coupling time for a spherical particle of radius $r$ is given as
+\begin{equation}
+\tau_{f_E} = \frac{4}{3} \frac{\rho_p}{\rho_g} \frac{r}{v_g}
+\label{tau0}
+\end{equation}
+with $\rho_g$ as gas density, $\rho_p$ as particle density and $v_g$ as thermal gas velocity. 
+For small $Kn$, the Stokes law applies and it is
+\begin{equation}
+\tau_{f_S} = \frac{2 r^2 \rho_p}{9 \eta} 
+\label{tauS}
+\end{equation}
+with the viscosity $\eta$.
+For $Kn \sim 1$ eq. \ref{tauS} can be used, if a correction factor $f_c$ is added.
+\begin{equation}
+\tau_f = \tau_{f_S} \cdot f_c.
+\label{tau}
+\end{equation}
+Here, $f_c$ is the Cunningham correction \citep{cunningham1910,hutchins1995}
+\begin{equation}
+f_c = 1+Kn(1.257+0.4e^{-0.55 Kn})
+\end{equation}
+If a particle is dragged through a fluid with constant external force $F_{ext}$ it will be accelerated until the drag compensates for this force.
+This leads to a constant velocity $v_{rel}$ relative to the gas in equilibrium. In the case of gravity with gravitational acceleration $g$ it is
+\begin{equation}
+v_{rel} = g \cdot \tau_f
+\label{vrel}
+\end{equation}
+However, if the gas motion changes on a timescale $\tau_{gas}$ comparable to the friction time, this simplification no longer holds. Therefore, an important quantity for describing the system is the Stokes number, which is the ratio between coupling time and typical time for gas motion variation.
+\begin{equation}
+St_0 = \frac{\tau_f}{\tau_{gas}.}
+\end{equation}
+{In turbulence, $\tau_{gas}$ usually describes the correlation time of the smallest turbulent eddies in the flow.
+A different $\tau_{gas}$ plays a major role in our experiments, where we take $\tau_{gas}$ to be the rotational timescale $\tau_{gas} = 1/(2\pi f) = 1/\Omega$ of the experiment chamber, as the gas follows this motion. Here, $f$ is the rotation frequency and $St = \tau_f \cdot 2\pi~f$. 
+
+This Stokes number, e.g., allows an estimate of the time that a particle can stay trapped in the rotating flow or the timescale on which the cloud gets thinner, limited by centrifugal losses as follows.
+The radial drift velocity resulting from the centrifugal acceleration from the rotating chamber is
+\begin{equation}
+v_r = \tau_f \Omega^2 r.
+\end{equation}
+To first order, the time $t_d$ needed to double this orbit is determined by $v_r t_d = r$. As $t_d$ is given by the number of rotations $N_d$, and the rotation frequency by $t_d = N_d / f$, we can estimate the number of rotations $N_d$ to double the orbits by \citep{klahr1997}
+\begin{equation}
+N_d = \frac{1}{2 \pi St}.
+\end{equation}
+With our chosen $St = 0.014$ for the experimental setup (see below), typical  changes e.g. of the dust to gas ratio occur in about 10 rounds or 30 s.
+
+The Stokes number as referred to in the planet formation context $St_{Kepler} = \tau_f \Omega_{Kepler}$ has a different meaning. 
+Here, one uses $\Omega_{Kepler}$, the orbital frequency of the disk.
+This Stokes number scales the radial drift rate of particles in the nebula to \citep{Weidenschilling1977a}
+\begin{equation}
+v_r \propto - 2 \frac{St_{Kepler}}{1 + St^2_{Kepler}},
+\end{equation}
+indicating that a maximum of the radial inward drift occurs for $St_{Kepler} = 1$.
+
+From work on streaming in\-sta\-bi\-li\-ties, significant \linebreak growth rates are ex\-pected to start for $St_{Kepler} \geq 0.001$ -- 
+$St_{Kepler} \geq 0.01$ \citep{drkazkowska2014,bai2010,yang2017,Carrera2017},{ because drift {between two components} is essential for the onset of any Resonant Drag Instability.
+
+In both cases, experiment and disk, a low Stokes number indicates that the mean motion of particles, being either radial drift toward the star, or sedimentation and centrifugal motion in the laboratory, can be described by a terminal velocity to first order (eq. \ref{vrel}).}
+Eq. \ref{vrel} holds strictly speaking for small Stokes numbers $St_0$, which should be given in our low Reynolds number (${\rm Re} = \frac{\rho_gas \cdot v \cdot d}{\eta} = 0.007$ for a single sphere) quasi laminar setup of
+the rotating gas in the experimental chamber.
+In other words the $St_0$ will initially be smaller than $St$, but this may change if the particles themselves drive additional gas velocities. A violation of eq. \ref{vrel} is then the route to further increase the local dust-to-gas ratio via turbulence (independent of whether we consider the solar nebula or a laboratory flow), which otherwise may be hard to achieve \citep{Johansen2005}. Maximum concentration in a turbulent flow occurs for $St_0=1$ particles \citep{Ormel2007}.
+While the linear streaming instability can indeed concentrate radially drifting particles in the solar nebula  \citep{Youdin2005}, such a linear instability, so far, is not known for sedimenting spherical particles in laboratory. For non-spherical grains, an instability could be identified \citep{koch_shaqfeh_1989}}. 
+{It would be interesting to study the differences between spherical and non-spherical grains. As the given experiment and analysis is already complex and is used for the first time we start with spherical particles. The complexity of choosing and acquiring non-spherical particles including all aspects of describing and manipulating non-sphericity, rotation, sizes and dust loading are beyond this work.}
+
+The dust to gas ratio mentioned several times is another important parameter {influencing the concentration mechanisms. Depending on the particle stopping time, different minimum global dust to gas ratios inside the system are needed to lead to instable states \citep{yang2017}.} For the global or average ratio, we define $\epsilon$ as ratio between average particle mass density and average gas density $\rho_g$.
+\begin{equation}
+\epsilon = \frac{\frac{N \cdot m_p}{V}}{\rho_g} = \frac{4}{3} \pi r^3 \frac{N}{V} \frac{\rho_p}{\rho_g}
+\label{epsilon}
+\end{equation}
+Here, $\rho_p$ is still the bulk density of the individual grains (not average solid density), $V$ is the total volume covered by particles, $N$ is the total number of particles injected and $m_p$ is the grain mass.
+The local motion of a particle will depend on other particles, as they back-react on the gas. 
+Grains can be considered as "test" particles if $\epsilon \ll 1$. 
+Based on a simple inertia argument, collective motion occurs at least if $\epsilon \geq$ 1.
+It is one motivation of our work to study at what point exactly the density dependence of particle motion sets in while $\epsilon$ is still well below 1.
+
+In detail, the local particle (or ''dust'') density will differ from the average value and change the motion of local grains. During the study underlying this paper it became clear that local density is not enough as parameter. In hindsight, the argument would have been that for a high density clump it would be important how large this clump is. I.e., many particles at larger distances might have influence similar to that of a few particles in a closer neighborhood. This complicates the situation, as spatial regional limits are not well defined in a fluctuating density field. We therefore introduce as new parameter the closeness $C_i$ of particle $i$, which accounts for both, local number density of grains and distances between grains, as
+\begin{equation}
+\label{eq.close}
+C_i = \sum_{n=1}^N \frac{1}{r_n-r_i}
+\end{equation}
+{We note, that since we observe particles in a 2D plane, distances between particles are also measured in a 2D-space. In general, closeness is not limited to 2D.}
+A graphical representation of the concept of closeness is seen in fig. \ref{fig.closing}.
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{closeness2.pdf}
+    \caption{\label{fig.closing}On the definition of closeness {in 2D}}
+\end{figure}
+Note that here, $r_i$ is the position of grain $i$, not its radius.
+Closeness or valued centrality is often used in the literature in graph theory as a measure of centrality in a network \citep{marchiori2000, Dekker2005}.
+The $1/r_i$-dependence in this definition is also known from the long-range hydrodynamic interactions of sedimenting spheres in Newtonian fluids under creeping flow conditions (e.g. \citet{brady1988,Segre1997,janosi1997}).
+So for this first study we consider this definition of closeness as suitable parameter to quantify the influence of a region on an individual grain's motion.
+
+We note that closeness might not be intuitive, so we caution the reader that closeness is constructed from distances \textbf{and} numbers of particles, and has a unit of 1/m. 
+For our global initial dust to gas ratio $\epsilon =0.15$, assuming homogeneously distributed particles, the closeness would have a maximum in the center of the chamber, and we find $C = 16.7~\rm /mm$, and a minimum toward the edge of the chamber of $C =  9.3~\rm /mm$, while the mean closeness would be $C = 13.9~\rm /mm$.  The fluctuations we find in the experiments of up to $C = 40~\rm/mm$ are significant deviations from the mean value and already indicate a rather non-homogeneous cloud.
+
+
+
+
+\section{Experiment}
+\subsection{Setup}
+
+The basic feature of the ground based experiment that prevents particles from sedimenting to the bottom is trapping them in circular orbits within an eddy. This idea was proposed by \citet{klahr1997} for protoplanetary disks (fig. \ref{fig.eddy}). The same idea applies in our experiment. {One difference is that the rotation of the gas is not
+induced by thermal convection but by the rotation of an experiment chamber.} As the chamber walls apply friction to the gas, it
+responds by rotating in a rigid rotation along with the vacuum chamber. 
+%{Another difference is that in the solar nebula the vertical $z$ component (perpendicular to the disk mid-plane) of stellar gravity changes with height as $g_z = -\Omega_{Kepler}^2 z$, which leads to variations in the settling velocity. As an effect, sufficiently small particles spiral inwards towards their equilibrium point, which might be mimicked in the laboratory but is not the focus here.}
+
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{eddy.pdf}
+    \caption{\label{fig.eddy} Principle of particle trapping against gravity in a convective eddy of a protoplanetary disk \citep{klahr1997}. }
+\end{figure}
+A sketch of the experiment can be seen in fig. \ref{fig.setup}.
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{setup.pdf}
+    \caption{\label{fig.setup} Schematics of the experiment. Not shown are auxiliary parts. The experiment chamber is a vacuum chamber evacuated prior to experiments to a preset pressure. A camera is observing particles from the front by scattered light. {The origin of the coordinate system is the center of rotation.}}
+\end{figure}
+
+
+{The experiment chamber is about 22 cm in diameter and 25~cm in depth with the measurement plane in the middle of the chamber.} It is evacuated to a preset pressure before the experiment is started.\\
+{Particles are injected into the chamber through a vibrating sieve included in
+an extension of the vacuum chamber. This beam of particles has a width of 5 cm and 
+a thickness of 5 mm.}
+A number of electrical contacts are fed through to the rotating system. Inside the chamber a ring of LEDs generates light that is scattered from the particles which are imaged by a non-rotating camera in the front.
+{The camera is observing the particles from the front at a distance of approximately 45~cm. The focal length of the objective is 35~mm. {The resolution of the camera is 1.3 megapixel ($123  \rm \mu m/px$),} frame rate is 100~fps and the exposure time is 1800 $\rm \mu$s. The field of view is 16x13~cm and the depth of field is 5~cm. }
+
+
+
+
+
+
+
+
+
+
+
+{\subsection{Procedure}
+The center of rotation of the chamber is determined by viewing the superposition of images of a grid placed inside the rotating chamber.\\
+Once the experiment chamber is evacuated, the vacuum pump is disconnected.
+Particles are continuously injected into the chamber while the experiment is still at rest. Due to their finite sedimentation velocity, they do not reach the bottom of the chamber immediately. The rotation is started with a preset rotation frequency $f$ and the injection mechanism is stopped. After that, recording is started.\\
+Particles in regions with stable equilibrium points are trapped inside the chamber. It is necessary, that particle friction time, gas pressure and chamber rotation frequency are well adjusted to trap particles. Real particle tracks can be seen below in fig. \ref{fig.circles}.\\
+Here, the data of one of those experiments is shown. Observations were taken for 30~s. Only data after 6 seconds (2 rotations) is considered to avoid any initial influences. Overall, about 1 million particle positions were tracked and analyzed.}\\
+
+
+
+\subsection{Experimental parameters}
+
+A summary of the most important parameters of the experiment is given in table \ref{para}.
+For this first study we used hollow glass spheres to get clouds of large non-sticky particles with low particle density for short gas-grain coupling times. {Here, non-sticky refers to the fact that the grains are sand size (larger than about 100 $\rm \mu m$) and not supposed to stick together easily due to surface forces upon collisions as opposed to micrometer sized dust.} {This is of no further importance for the analysis though.} An image of the particles is shown in 
+fig. \ref{fig.hollow}. 
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{hollow.pdf}
+    \caption{\label{fig.hollow}{ Microscopic Image of the hollow glass spheres used. The beads are placed on a microscopic slide.}}
+\end{figure}
+The grains have an average diameter of 165~$\rm \mu m$. However, we will stick to terms like dust to gas ratio here for the relation between particle mass and gas mass. For gas, we used air.
+
+
+\begin{table}
+\centering
+\caption{Experimental parameters: Besides for the grain size, where the range is specified for all parameters deduced from this, only average values are given.}
+\begin{tabular}{r|l}
+Parameter&Value\\
+\hline
+particle size&165 $\rm \mu m$  $\pm$ 15 $\rm \mu m$\\
+particle density&60 $\rm kg / m^3$ \\
+initial particle number& 650\\
+gas pressure&950 Pa $\pm$ 100 Pa\\
+initial dust-to-gas& 0.15$\pm$0.02 \\
+final dust-to-gas& 0.07 $\pm$0.01\\
+max. local dust-to-gas & 1.4 $\pm$0.1\\ 
+initial volume filling factor& 3 x10$^{-5}$\\
+friction time&7 ms\\
+Knudsen number&0.08\\
+{chamber} rotation frequency \textit{f} & 0.336 Hz\\
+Stokes number&0.014\\
+$Re_\mathrm{Setup}$ with d = 22 cm & 18.5
+\label{para}
+\end{tabular}
+\end{table}
+
+{
+Particle size and particle density are specifications of the manufacturer. The size distribution was verified via microscopic images, but there are concerns regarding the particle density (see section 4.1).\\  
+The initial and final dust-to-gas-ratios are calculated using eq. \ref{epsilon} with an estimated volume of V=31800 mm$^3$, which is derived from the area of all possible stable particle trajectories and an estimated depth of 5~mm corresponding to the thickness of the injected particle beam. The local dust-to-gas-ratio is calculated within a fraction of the measurement volume of V=125 mm$^3$, again with 5~mm depth.\\
+Considering the depth of view of the camera, the measurement volume increases by a factor of 10 and therefore the values of $\epsilon$ would decrease by the same factor.\\
+The friction time is calculated {with eq. \ref{vrel}} {considering} the terminal velocity of undisturbed sedimenting particles to prevent errors resulting from uncertainties in particle density. Therefore, also the Stokes number isn't influenced by {particle densities.} \\
+{The Stokes number is calculated with the friction time and rotation frequency $St= \tau_f \cdot 2 \pi \cdot f$.}
+Since {injected} particles move in {a} depth of 5~mm, one can give an error {caused by the 2D projection} of 1$\%$ in all quantities where the particle position is important, namely velocities, friction time, Stokes number, Reynolds Number, local $\epsilon$ and Closeness.}
+
+
+
+
+\subsection{Coordinate System}
+%{
+Although a rotating system was examined, it is important to emphasize, that the coordinate system is neither rotating nor cylindrical, but Cartesian. The point of origin of the chosen coordinate system is in the center of rotation of the vacuum chamber; {rotation is at rate $\Omega = 2 \pi f$ and rotation axis defined by} the $y$-axis along the horizontal plane. {The $z$-axis shows then in the opposing direction of gravity (see Fig. 2 for the definition of axes). As we will see, the Ekmann number of our rotating gas chamber, indicating the relative importance of rotation (Coriolis forces) in comparison to viscosity is weak, 
+\begin{equation}
+{\rm Ek} = \frac{\rm Ro}{\rm Re} \approx 0.025,
+\end{equation}
+and in the absence of any perturbations but the particle feedback leading to a rigid rotation of the
+gas with
+\begin{equation}
+u_x = z \Omega; \,\,\,\, u_z = - x \Omega; \,\,\,\, u_y = 0.
+\end{equation}
+The relevant forces in the experiment are gravity $F_g = m g \vec{e}_z$ and the drag force $\vec{F_d} = - m \cdot \frac{\vec{v}-\vec{u}}{\tau_f}$, where $\tau_f$ is the friction time as detailed below. Thus individual particle motions are
+approximately given by
+\begin{eqnarray}
+\dot v_x &=& - \frac{v_x - z \Omega}{\tau_f},\\
+\dot v_y &=& - \frac{v_y}{\tau_f}, \\
+\dot v_z &=& - \frac{v_z + x \Omega}{\tau_f} + g.
+\end{eqnarray}
+Neither centrifugal nor Coriolis forces enter this system, as it is given in non-rotating coordinates.
+{In contrast to motion in protoplanetary disks, a corotation frame would not simplify the problem, as in the laboratory experiment the vector of gravity would then rotate.
+Regarding the short friction time of $\tau_f=7$~ms (see below) and the rotation timescales of the experiment of about $2 \pi f = 2$~s, the solution is as follows:}
+
+{Along the y-direction, the motion is a simple exponentially damped motion or $v_y = v_{y0} e^{-t/\tau_f }$. Here, $v_{y0}$ is the initial velocity in y-direction. This is close to zero as particles are injected vertically. In any case, as $\tau_f$ is small, this is quickly damped and to a good approximation $v_y = 0$. The particle motion is therefore restricted to the x,z-plane.}
+
+{Along the x-direction, we also have a damped motion but within a gas flow. Neglecting that z varies with time due to the short friction time, the solution is $v_x = (v_{x0} + z \Omega) e^{-t/\tau_f } - z \Omega$. $v_{x0}$ would be an initial velocity in x-direction, but again, the exponential part decays rapidly and the motion can be approximated by $v_x = - z \Omega$.} 
+
+{ Last but not least the motion in z-direction is a damped free fall motion if due to the small friction time we again neglect that the x-position is time dependent. The solution is
+$v_z = (g \tau_f + v_{z0} + x \Omega) e^{-t/\tau_f} + x \Omega - g \tau_f$ and for fast decay the equilibrium motion is
+$v_z =  x \Omega - g \tau_f$.}
+
+{ In total the equilibrium solutions are
+\begin{eqnarray}
+v_x &=& -z \Omega,\\
+v_y &=& 0, \\
+v_z &=& x \Omega - g \tau_f .
+\end{eqnarray}
+}
+
+{which is rotation at rate $\Omega$ shifted by $dx = \frac{g \tau }{\Omega}$ from the rotation center of the gas.
+}
+As a result, single unperturbed particles either levitate at an equilibrium point or are trapped in closed orbits around  this point.}
+
+{{While the problem was not treated in a rotating frame, the approximations behind these calculations can still be quantified by considering centrifugal forces. At the equilibrium point they are zero. The centrifugal forces are otherwise still orders of magnitude smaller than gravitational acceleration $\Omega^2 r << g_z$, see Section 2. Also, the radial outward drift due to centrifugal forces $v_r = \tau \Omega^2 r$ would bring a Coriolis force but as a second order correction with $F_{Cor} = 2 \tau \Omega^3 r$, this is even smaller than the centrifugal term. Using the numbers of the experiment for $\Omega$ and $\tau$ and for a radius of $0.1$ m, we get a ratio of gravity to centrifugal force to Coriolis force of about 10 / 0.5 / 0.01.
+The calculations above are therefore exact to about 5\% in the context of the experiments.}}
+
+
+{\subsection{Analysis}}
+{Image editing and particle analysis is done with ImageJ \citep{fiji2012}. For the analysis, individual grain positions and tracks in a cartesian coordinate system are generated by the TrackMate plug-in \citep{trackmate}. 
+{Particles are not resolved in 3D}. In case of two overlapping particles, one track is cut but continued if the particle appears again. {In high particle loading, particles might be missed. However, since even in this case the cloud is far from being optically thick, these are rare events which we consider to be of no significance here.} A wrong assignment can be prevented by customizing parameters of the particle-linking processes. For our analysis, particle track length is not important due to the large amount of data averaging out details with most cases allowing determination with low errors on the percent level. The same is true for particle positions and closeness (see below) which is not sensitive to and does not require a detailed search for the best individual particle position algorithm.}
+Velocities are determined from short parts of these tracks.
+
+{With help of the Trackmate feature, particle positions are assigned from frame to frame. We assume that the particle velocity between frames is constant and calculate the particle velocity for every frame and every particle. With the known center of rotation and position of the particle at the given frame, the gas velocity at that point is calculated by assuming rigid rotation. From gas velocity at the current particle position and particle velocity, the relative velocity, which we will refer to as sedimentation velocity, is determined.
+The rigid rotation is validated by comparing the sedimentation velocity of particles at low particle loading (to prevent particles from influencing each other) for different rotation frequencies and therefore different equilibrium points. These shift in a linear way, so that a linear increase from the center to the wall of the chamber is appropriate.}
+
+{The closeness is calculated for every particle using equation \ref{eq.close} with all particle positions at the given frame}.
+
+For the average dust-to-gas ratio $\epsilon$, we take the particle mass over gas mass within the volume initially filled with particles. 
+{Mainly due to increased sedimentation velocity in high local particle loadings, particles increase their orbit and collide} with the chamber walls. {Following from this, particles are lost in the course of the experiment and} the particle density decreases with time. {Therefore, all data points are {grouped in} single full rotations of the chamber.
+{The total number of evaluated data points are $\approx\!\!875,000$; each full rotation point represents between $\approx\!\!54,000$ and $\approx\!\!118,000$  data points}
+The shape and colour of the data points match the respective rotation.}
+{The decreasing solid-to-gas ratio due to lost particles} is shown in fig. \ref{fig.dtog}.
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{density2.pdf}
+    \caption{\label{fig.dtog}Global dust-to-gas ratio over time. Dust density is calculated with respect to injected particle depth. {The colour and shape of the data points correspond to the points in fig. \ref{fig.vvonc} }}
+\end{figure}
+In agreement with the estimates above, significant changes occur in 10 orbits, or 30 s. Details for clumps of different closeness are given below.
+
+It has to be noted that these dust to gas ratios are calculated based on the average grain size, the observed number of grains and the 5 mm thickness of the injected particle beam.
+If the beam were to disperse along the cylinder axis over time, then the low densities at later times would be lower. 
+
+
+
+
+
+
+\section{Grain Motion}
+
+\subsection{Grain Motion at Low Particle Loading}
+
+Especially at low dust-to-gas ratios, the absolute gas motion coincides with the rigid rotation around the center with the set rotation frequency.
+For all particles we calculate a relative velocity by assuming the gas to be in such a circular motion and subtracting this absolute motion. {Centrifugal parts are neglected.}
+Grains in steady state sedimentation should move on circular orbits in the laboratory 
+reference frame, with $v_{rel} = \tau_f g$ relative to the gas. Indeed this is the case. 
+Fig. \ref{fig.circles} shows the motion of individual particles.
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{round1.pdf}
+    \caption{\label{fig.circles}{ Particle tracks as superposition for 1/4 of a rotation. The chamber rotates clockwise. Due to variations in sedimentation speeds studied, there is a range of equilibrium positions. Therefore, the circular tracks have different centers.}}
+\end{figure}
+Due to the limited variation in particle size the point of stability, which
+is the center of these circles (not the center of the chamber), is similar for all particles.
+The calculated sedimentation velocity {(eq. \ref{tauS} and \ref{vrel})} for an average particle is 50 mm/s, but this bears uncertainties e.g. in {volumetric mass density (see Table \ref{para})}, which is not well constrained. We therefore determined the sedimentation velocity of a single grain by dropping individual grains in a gas of the same pressure used here and find a sedimentation velocity of 69 mm/s, roughly consistent with the calculated value. This value for a single grain fits well with observed sedimentation velocities of the rotating grains at low particle loading, with an average of 
+68~mm/s (see fig. \ref{fig.vvonc} below). The closeness in this case of lowest $\epsilon$ reaches up to 20 /mm but has no influence on the average sedimentation velocity.\\
+{Comparing the measured and calculated sedimentation velocity, a bulk density of approximately 75 $\rm kg / m^3$ would fit to the real terminal velocity rather than the manufacturer specification of 60 $\rm kg / m^3$. In this regard, the dust-to-gas ratios given in the paper are underestimated by a factor of roughly 25$\%$.}
+
+
+
+
+\subsection{Grain Motion at High Particle Loading}
+
+After injection, some particles always get lost, decreasing the overall number of grains.
+While the average dust-to-gas ratio $\epsilon$ only varies by about a factor of two between the beginning of the experiment (high ratio) and the end (low ratio), 
+the variation in particle motion is much stronger.
+Fig. \ref{fig.dtog2} shows a snapshot of the variations of local dust to gas ratios at early times, with values up to $\epsilon_{local} \geq 1.4$.
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{density.pdf}
+    \caption{\label{fig.dtog2}Snapshot of local dust-to-gas ratio at early times (dense state) based on 2D projections. 
+}
+\end{figure}
+Particles in regions with high closeness now sediment 
+much 
+faster than particles in less
+close regions, as seen in fig. \ref{fig.vvonc} (lower data). This figure shows the sedimentation velocities and closenesses averaged over one full rotation each.  This time sequence correlates to a change in the global $\epsilon$ (see e.g. fig. \ref{fig.dtog} which uses the same symbols). 
+The solid to gas ratio decreases from about $\epsilon = 0.15$ at round 2 at 6~s 
+(lower curve in fig. \ref{fig.vvonc}) to $\epsilon = 0.07$ at round 10 or 30~s (upper curve), as seen in fig.~\ref{fig.dtog}.
+{The outliers with smaller sedimentation velocity at low closeness are due to small grains. They can reside in regions not accessible for larger grains.}
+
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{Runde_1-3_mit_angepassten_Fits_II.pdf}
+\includegraphics[width=\columnwidth]{Runde_4-9_IV.pdf}
+    \caption{\label{fig.vvonc} Sedimentation velocity over closeness for individual rotations of the experiment chamber. The evolution with time goes from initially dense clouds { to less dense cloud. The upper graph shows rounds 2 - 4 (lowest curve, 2nd round/upmost curve, 4th round); the lower graph shows round 4 - 10 (lowest curve, 4th round/upmost curve, 10th round)}. Data are average values for at least 1000 particle positions {with equidistant spacing of the binned values in closeness space}. The mean number of values contained in one binned data point is 7500. \textbf{The standard errors of the mean values vary between 0.1\% and 0.6\%.}
+	{For rounds 2 - 4, lines are linear fits for the high closeness data points with a vertical intercept of 68 mm/s. For rounds 5 - 10, lines are linear fits with an vertical intercept of 68 mm/s. The non-dashed lines indicate the range of data points used for the fitting. The top line (round 10) in the lower figure is a straight line as sedimentation velocity cannot be lower than the sedimentation velocity of a single particle. There are a few outliers at lower closeness for each round respectively. These are due to a fraction of small grains present, which sediment slower.}
+    }
+\end{figure}
+
+As described above and visible in round 10 (fig. \ref{fig.vvonc}), for particles at later, less dense times,
+all particles sediment with the same speed, also at a closeness 20 $\rm mm^{-1}$.
+In contrast, in the high loading case, the speed of particles with small closeness also 
+increases with closeness. Obviously the system becomes sensitive to closeness and closeness variation only 
+in the denser case.
+
+As a first approximation, the dependence of the sedimentation speed on closeness can be described as linear or
+\begin{equation}
+\label{eq.vcloseness}
+v = v_0 - F_s \cdot C_i
+\end{equation}
+{This slope $F_s$ corresponds to the lines in fig. \ref{fig.vvonc}}.
+Note that $v$ and $v_0$ are negative in our notation of sedimentation.
+{The sensitivity factor $F_s$ is not constant over time.} It increases with the average closeness or dust to gas ratio of the system, as shown in fig. \ref{fig.sensitive1}.
+{The sensitivity factor cannot be lower than 0. This is due to the fact that particles in a dilute configuration in our system can never sediment slower than their undisturbed sedimentation velocity $v_0$. The turnover point is determined by the crossing of the x-axis of the linear fit (black line) in fig. \ref{fig.sensitive1}.}
+
+
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{sense1.pdf}\par
+\includegraphics[width=\columnwidth]{sense2.pdf}
+    \caption{\label{fig.sensitive1} Sensitivity factor (in $\rm mm^2/s$) dependence on average closeness (top) and dust-to-gas ratio (bottom); {Lines are linear fits with slope (top) $\alpha = 0.069 \pm 0.002\,  \rm mm^3/s$ and (bottom) $\alpha = 10.3 \pm 0.5\, \rm mm^2/s$. {The offset of the linear fits are about  $14 \pm 1\rm mm^{-1}$ (top) and $0.08 \pm 0.01$ (bottom).} \textbf{The error bars show the error of the sensitivity factors of the linear fits in fig. \ref{fig.vvonc}.}
+    {We draw attention to the fact, that the sensitivity factor for high closeness($> 25\rm mm^{-1}$)/solid-to-gas-ratios($>0.15$) is only valid for ranges indicated in figure \ref{fig.vvonc}.}}}
+\end{figure}
+
+{Therefore, in total the sedimentation velocity can be expressed as
+\begin{equation}
+v = v_0 + \alpha \cdot (\epsilon-\epsilon_{crit}) \cdot C   
+\end{equation}
+if $\epsilon$ is larger than a critical $\epsilon_{crit}$.} {The value of $\alpha$ is about $9.7 \rm mm^2/s$ for the given experimental conditions.}
+
+
+If the total cloud is sensitive (large $\epsilon$), and if a region of high closeness forms or approaches a particle, this particle can join this region of high closeness and sediment faster. This is in contrast to thinner clouds where all particles essentially move independently. 
+
+This does not imply an instability with a steadily growing particle number as grains can also drop out of high closeness regions. 
+Trajectories of such particles are shown in fig. \ref{fig.entrain1}.
+
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{track1.pdf}
+\includegraphics[width=\columnwidth]{track2.pdf}
+    \caption{\label{fig.entrain1} Top: Particles entering a region of high closeness getting entrained; Bottom: Particle leaving a high closeness region staying behind. {Dark background colour corresponds to low particle-density region and light background colour to high-particle-density region. The trajectories are coloured red for better recognition. The images originate from real measurements and show a 20x20~mm image section.}}
+\end{figure}
+% Fig. \ref{fig.track1} shows the evolution of closeness attributed to a single particle over time and the corresponding sedimentation speed. Closeness is the main parameter influencing single particle trajectories, though other not yet examined influences lead to small deviations in sedimentation velocity from an average behavior.  This might also be related to the unknown 3d closeness. As such, non-monotonous variations might also result in loops as seen for the particle in fig. \ref{fig.track1} .
+
+Fig. \ref{fig.track2} shows the evolution of closeness of {a} single particle over about 4 seconds (slightly more than one round). Compared to the mean sedimentation velocity, the particle has a higher velocity. This is caused by the biased choice of the particle. Larger particles have a higher visibility and therefore, can be tracked for a longer period. 
+The particle starts at a high closeness (6~s), enters a less close particle configuration (7~s), re-enters a high closeness area (8~s), leaves it again (9~s) and increases in closeness till the end of the track.
+{Closeness is the main parameter influencing single particle trajectories, though other not yet examined influences lead to small deviations in sedimentation velocity from an average behavior.  This might also be related to the unknown 3D closeness. As such, non-monotonous variations might also result in small loops.} It is obvious, that the {closeness-velocity-relation} is not caused by the experimental setup or procedure.
+{A main finding is, that the sedimentation velocity of individual particles is linearly dependent on closeness, which is also the main motivation for our model shown in eq. \ref{eq.vcloseness}.} 
+
+
+Particles can join and {re-enter} dense particle configurations multiple times on timescales shorter than the period of one rotation of the experiment (fig. \ref{fig.track2}). 
+
+% \begin{figure}[h]
+% \includegraphics[width=\columnwidth]{track.pdf}
+%     \caption{\label{fig.track1} Example of an individual particle in a dense cloud in a closeness-velocity diagram.{ The particle starts at high closeness at about 7~s and ends at lower closeness at 12~s.}}
+% \end{figure}
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{single_Track.pdf}
+    \caption{\label{fig.track2} {Example of an individual particle in a dense cloud in a closeness-velocity diagram over about 1 Round. The particle enters and leaves dense areas multiple times. The times refer to the absolute time of the experiment (see fig. \ref{fig.dtog})}}
+\end{figure}
+
+At late times all particles on average sediment like individual grains with calculated sedimentation velocity. However, the speeds still vary due to variations in particle size.  Typical velocity distributions for the low density case are seen in fig. \ref{fig.speed1} (right distribution).
+At earlier times (time 6~s, round 2) variations due to an increased sensitivity are added, and the variations are much larger as seen in fig. \ref{fig.speed1} (left distribution). Note that lower values due to the negative values are higher absolute sedimentation velocities. 
+
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{veloc2and9.pdf}
+    \caption{\label{fig.speed1} {Histogram of the }sedimentation speed for low particle loading (right distribution) and high particle loading (left distribution). {The y-axis represents the count of data points of the particles with the corresponding sedimentation velocity.}}
+\end{figure}
+
+Fig. \ref{fig.speed2} shows the closeness distribution changing from late to early.
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{close259.pdf}
+    \caption{\label{fig.speed2} {Histogram on the evolution} of the closeness distribution for 3 different times from right distribution ({early/high particle loading}) to left distribution ({late/low particle loading}). {The y-axis represents the count of data points of the particles with the corresponding closeness.}}
+\end{figure}
+As can be seen, the initial closeness distribution has a wing at the high value side which it loses first. In general, particle regions with high closeness are preferentially lost, leading to an inclined distribution, with steeper drop off to higher values. 
+This is due to the fact that particles sedimenting faster have a smaller stable region to rotate within the experiment and are more easily lost to collisions with the wall.
+
+{Some of this is summarized in fig. \ref{fig.fluctuate}.}
+It shows that the relative width in velocity essentially stays constant but the initial fluctuations at high dust-to-gas ratio are much broader. {The relative width at later times (lower dust-to-gas ratio) is only somewhat wider than the size distribution of about 20\% full width. Otherwise, this is similar to findings in other sedimentation experiments. E.g. \citet{guazzelli2011} find 
+an increase of the relative width with filling factor (proportional to dust-to-gas ratio). However, the dependence they find is very weak at the low filling factors relevant for our experiment. 
+
+In any case, our data imply that in a region of higher closeness, where the average behavior changes and the sedimentation velocities increase also the variation in speeds increases in the same manner. {Therefore, while the absolute sedimentation velocity increases in a dense region, the sedimentation speed is still linear to particle size. In other words, if a grain of average size is a certain factor faster, also smaller or larger grains in the same dense region are faster by the same factor.} This is valid up to a dust-to-gas ratio of 0.15 in our case. If this is a real transition remains to be seen in experiments approaching higher dust-to-gas ratios from the lower end.}
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{fwhm_velocity.pdf}
+\includegraphics[width=\columnwidth]{sd_close.pdf}
+    \caption{\label{fig.fluctuate} {Full width at half maximum (FWHM) of the }relative velocity {distribution divided by the} average velocity and standard deviation (SD) of the  closeness {distribution divided by the average closeness over dust-to-gas ratio. The FWHM was used because of the almost Gaussian shape; the SD was used because the closeness distribution is not Gaussian shaped (see Fig. \ref{fig.speed1} and \ref{fig.speed2}).}}
+\end{figure}
+
+
+\section{Discussion}
+
+
+In this work, we used the laboratory setup of a rotating experiment to study particle clouds at varying, but in general high, dust-to-gas ratios for a longer time in spite of sedimentation under Earth's gravity.
+This allows an analysis of the particle motion in the presence of other particles for different conditions. 
+The basic parameter that is measured is the sedimentation velocity of all individual particles and their distances (in 2D).
+Variations in the \textit{local} dust-to-gas ratio are important, but this value is not sufficient to describe the motion of a local particle cloud as it neglects the influence of neighboring regions on the particle motion. We therefore defined the closeness as another parameter for each individual particle which depends on all particles and their distances 
+to the particle considered.
+
+We can separate two regimes of particle motion.
+For dust-to-gas ratios below $\epsilon = 0.08$ particles behave like test particles embedded in a gas. That means that they essentially do not feel the presence of the other particles, or in other words they sediment like individual particles would sediment. There is no collective effect. This even holds for regions of closeness up to 20 $\rm mm^{-1}$. 
+As closeness might not be an intuitive quantity, it might be argued that the largest closeness might still be representative of a dilute cloud corresponding to test particle behaviour. However, this argument does not hold for denser clouds.
+
+For dust-to-gas ratios above 0.08 {(see fig. \ref{fig.sensitive1})} all particle motion does depend on closeness. So for
+high dust loading, particles of closeness well below 20 $\rm mm^{-1}$ also have much higher sedimentation speeds than individual test particle grains should have, and it varies with the closeness of a grain. 
+To first order, the speed is now also linear {with} closeness for small values of closeness, and the {slope} of this linear dependence is sensitive to the global dust-to-gas ratio or average closeness. 
+
+We therefore defined the absolute of the {slope} as the sensitivity factor.
+The sensitivity factor becomes zero at a dust-to-gas ratio below $\epsilon \le 0.08$, which quantifies the
+separation of the two regimes of test particle behavior for lower values and collective
+motion above.
+
+{
+The influence of the closeness on the sedimentation velocity is reminiscent of similar findings on sedimenting clouds in the Stokes Regime. There, all particles perturb their surrounding gas velocity inversely proportional to the distance of the gas, leading to a correction term in the sedimentation velocity on the order of $O(1/r)$ \citep{GUAZZELLI2006539}. However, in \citet{GUAZZELLI2006539}, a well confined sedimenting cloud forms a torus, and finally breaks up. We did not observe anything like this and consider the situation to be different {in terms of the experimental setup, local particle volume filling factor and local particle density}. 
+
+Nevertheless, as a plausibility check we might consider the following simplified picture. 
+If the global dust to gas ratio is sufficiently large the total cloud is sufficiently {\em opaque} for the gas, and can be considered as a single particle in the Stokes regime. In contrast, at later times with a low average dust-to-gas ratio, the cloud becomes {\em geometrically thin} and gas streams through it unhindered, and the cloud can no longer act as one big Stokes particle. Therefore, in the first case (Stokes-Regime) the closeness plays a role, where as in the second case (Knudsen regime) no such effect can be observed. 
+
+As a criterion on when the cloud is "opaque" for the gas, one can estimate the velocity change $\delta u$ the gas experiences as it streams through a particle cloud of dimension $a$ at a given dust to gas ratio $\epsilon$.
+ }
+\begin{equation}
+u = - \epsilon \frac{v_0}{\tau_f} t_a.
+\end{equation}
+With $t_a = a / v_0$ being the crossing time for gas through the clump, we can claim that significant opaqueness is given when $u = v_0$
+and thus:
+\begin{equation}
+\epsilon_c  = \frac{v_0 \tau_f}{a}.
+\end{equation}
+{Plugging in a cloud size from Fig.\ (7) with about $a=40~\rm mm$, $v_0 = 70~\rm mm/s$ and $\tau_f = 7\cdot 10^{-3}~\rm s$ results in a critical density of $\epsilon_c = 0.01$, and we see that the actual $\epsilon$ values indicate easily that this clump can not be penetrated by the gas. 
+At late times when the clumps are no longer as big as initially, say for instance $a = 5~\rm mm$, the critical  value for dust-to-gas would be $\epsilon_c = 0.1$, which is on the order of the transition in Fig. (9), when collective effects involving closeness are no longer observable. This is only a first qualitative reasoning.
+Certainly, there is e.g. a limit in increasing the size of a cloud at low dust to gas ratio to trigger collective behavior. Otherwise, any part of a protoplanetary disk would easily become collective.}
+
+In detail, at times of high mass loading in the experiments, individual particles in low closeness regions with small sedimentation velocities 
+can change their motion by entering regions of high closeness passing by, speeding them up. 
+However, they can also drop out of warp again into a region of lower closeness, thus slowing down. 
+
+We see fluctuations but do not see any concentration effect yet, leading to a continuous local increase of particles. 
+{Whether sedimentation induced gas flow and the associated turbulence can lead to local particle concentrations in a non-linear fashion is still an open question.
+
+With the current design,
+the experiment is biased to losing sub-clouds of high closeness or particles with high sedimentation speeds.  The stability point of fast particles is closer to the experiment wall and therefore the stability region is much smaller. Such regions are therefore preferentially lost due to collisions with the walls. This is also visible in the evolution of the closeness distribution, where the large values decrease more strongly than the small ones, leading to non-symmetric distribution with a small slope rising but a steep slope falling off toward larger closeness. In a way, the system cleans itself of 
+very ''close'' or ''unstable'' regions. On the other side, the difference in centrifugal motion responsible in some way mimics streaming, as denser cloudlets move outward further and can collect individual grains}.
+
+%The sensitivity factor dependence indicates that the average closeness might be better suited as a description for the dense regime than the average dust-to-gas ratio. At least the sensitivity factor is linear for all values of average closeness, while there is a deviation from linearity for the highest dust-to-gas ratio. 
+
+As far as sedimentation velocity goes, the variation (width) is linear in the absolute value (fig. \ref{fig.fluctuate}. 
+However, the closeness gets more pronounced at higher dust-to-gas ratios, but currently we would not give this a fundamental interpretation in view of the experimental constrains on cloud stabilities.
+
+Boiling this down, the essence of this work is the finding of increasing sensitivity
+with increasing dust-to-gas ratio. For dilute systems, a local increase in particle density -- or better, in closeness -- has little effect. At high particle loading, small
+changes in particle density lead to large changes in the sedimentation velocity of that region, more so the denser the region.
+
+This implies that some self-amplification {of the fluctuations in $\epsilon$} could only work where denser regions move faster,
+pick up grains in slower, less dense regions, and move even faster. So far we are only approaching this state, as these
+regions are unstable in the experiment and grains are lost to the walls.
+It is a strong indication, though, that some 
+sedimentation or also streaming instabilities, e.g. with centrifugal motion, might occur in laboratory
+experiments.
+
+\section{Summary}
+
+To sum this up, for a given experiment we can describe the absolute value of the sedimentation velocity of a particle as 
+\begin{equation}
+v = v_0  \quad \texttt{for} \quad \epsilon < \epsilon_{crit}=0.08\\
+\end{equation}
+\begin{equation}
+v = v_0 + \alpha \cdot (\epsilon-\epsilon_{crit}) \cdot C  \quad \texttt{for} \quad 0.15 \geq \epsilon \geq \epsilon_{crit}=0.08. 
+\label{eq.collective}
+\end{equation}
+The value of $\alpha$ is about $9.2 \rm mm^2/s$.
+
+%This might be compared to the simple assumption of a single particle clump of size $r_c$ sedimenting in an otherwise undisturbed gas.
+%\begin{equation}
+%v = v_0 + \beta \cdot (\epsilon - 0) \cdot r_c^2
+%\end{equation}
+
+%There are two principle differences. First, we do have a minimum solid to gas ratio, $\epsilon_{crit}$, for which collective motion gets important. Second, we traded the clump radius, $r_c$, for the closeness, $C$, as we do not have a well defined clump size, and closeness accounts for the local particle density as well as the distance between grains. 
+
+\section{Caveats and Future Work}
+
+There are limits in this work which might be improved in the future. 
+Observations are only two dimensional and the particle distribution along the rotation axis is unknown. So absolute dust-to-gas ratios might systematically be estimated to be too high. This can be improved with an additional camera and viewing angle.
+
+Even after much testing, this work is essentially only based on the analysis of a single experiment (except the examples of particles entering and dropping out of a dense region), as we had to develop an appropriate way of analyzing dense many particle systems, and to see where this might be leading. {Certainly, the database has to be extended to study different parameters mentioned. This is not meant tor raise doubts that what we call a single experiment is statistically insignificant. For the studied parameters one experiment provides a large data set and the given results on transitions to collective behaviour are valid.}
+
+There might be interesting physics in the dense (high closeness) regions that 
+is lost early on. It might be that it is exactly the regions of high closeness early on, which are lost due to instability in our experiment, that correspond to unstable regions in the sense of a sedimentation instability. This is only a speculation at this point, though, as it might be due to the initial conditions and did not evolve into this state on its own. Dense regions might be kept longer if the experiment Stokes number is decreased, decreasing centrifugal losses. 
+A decrease is possible but either requires slower rotation speeds, higher gas pressure, or smaller particles.
+The experimental capabilities still have to be explored. 
+
+Also, future experiments with low density clouds which are compressed or enhanced afterwards by some means will provide deeper insight.
+
+We started with the premise that at low particle loading, particles move 
+through a gas in rigid rotation, defining a relative sedimentation velocity. The gas motion will change in a more complex way in the case of high mass loadings. After all, it is the gas that mediates the coupling between grains. The calculated sedimentation velocities are therefore still a well defined construction, but at some point might loose the simple interpretation of relative velocity between grains and gas. 
+
+To make the laboratory findings and laboratory extension more applicable to protoplanetary disks, we intend to numerically simulate the experiment, gas and particles.
+
+{The fact that the individual particles are in the Knudsen regime, whereas the clumps are in the Stokes regime, is the typical case for a protoplanetary disk, thus to study this transition in experimental setups and accompanying numerical simulations will help us to also produce more reliable predictions for the occurrence of the streaming instability.}
+
+{Electrostatic charging of the grains might have an influence on the cloud evolution. We cannot exclude that grains are charged during injection. In fact, 
+\citet{yoshimatsu2017} used similar hollow spheres and showed that particles charge up after several seconds of intense vibration.
+However, they only observed effects under microgravity. Also \citet{Jungmann2018} showed charging to occur in collisions under microgravity. Charging  is certainly important during sticking events \citep{lee2015}. We did not observe trajectories though indicating attraction or repulsion of grains and essentially exclude further collisional charging and sticking. 
+{but consider our} system to be collisionless. 
+
+{The collision time is approximately\\ 
+$( \frac{N_P}{V}\cdot (4\pi d_P^2\cdot) \Delta v_p )^{-1}$ $= 14~\rm s$ with a maximum number of particles $N_P = 650$, a Volume of $V=31800$~mm$^3$, particle diameter $d_P=650\, \rm \mu m$ and a relative particle velocity of $10~\rm \frac{mm}{s}$}. {Unnoticed collisions might result in changes in the sedimentation velocity independent of the closeness. Such a collision would lead to only one outlying data point.  We evaluated almost 1 Million data points and therefore consider collisions to be negligible.}  {Also, }we did not observe the formation of aggregates.}
+
+\section{Conclusion}
+
+We define a Stokes number {in the experiment} with respect to the experiment rotation timescale which turns out to be 0.014. 
+This is a different Stokes number than the one defined in disks around young stars to define the triggering of the streaming instabilities for an estimated critical dust to gas ratio of $\epsilon = 0.027$ \citep{yang2017}.
+
+{Local concentrations of particles in both situations require local turbulent Stokes Numbers of order unity. This means that particles get concentrated when their friction time is on the order of the local turbulent correlation time. This is the case for the so far only numerically studied streaming instability in disks around young stars. Whether the sedimentation process studied in our experiments will also lead to velocity fluctuations and correlation times on the order of the friction time still has to be studied.}
+
+ 
+We see no collective behavior for low dust-to-gas ratios up to $\epsilon = 0.08$, which we interpret as a threshold for the gas in the Knudsen regime to 
+recognize a collection of particles as obstacle to the flow.
+However, above this value {(being well in the Stokes regime for the clumps)}, all dust motion is increasingly sensitive to small disturbances of the particle's closeness which
+{may or may not lead to} unstable situations. 
+
+Overall, our laboratory experiments are but a first study. Nevertheless, this 
+is the first experimental study of the underlying common ground physics of sedimentation and streaming instabilities at the transition from Knudsen to Stokes regime.
+
+
+The results indicate that there is potential for future improvements, but we clearly approach collective behaviors. Further experiments will hopefully lead us to well confirmed pictures of particle concentration and planetesimal formation by self gravity and streaming instability.
+\begin{acknowledgements}
+This project is supported by DFG grant WU 321/16-1 and Kl 1469/14-1.
+We thank the two referees for a thorough review of this work.
+\end{acknowledgements}
+
+
+% BibTeX users please use one of
+%\bibliographystyle{spbasic}      % basic style, author-year citations
+%\bibliographystyle{spmpsci}      % mathematics and physical sciences
+%\bibliographystyle{spphys}       % APS-like style for physics
+\bibliographystyle{aasjournal}      % mathematics and physical sciences
+%\bibliography{references}   % name your BibTeX data base
+
+% Non-BibTeX users please use
+%\begin{thebibliography}{}
+%
+% and use \bibitem to create references. Consult the Instructions
+% for authors for reference list style.
+%
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Bai \& Stone(2010a)}]{bai2010}
+Bai, X.-N., \& Stone, J.~M. 2010a, The Astrophysical Journal, 722, 1437
+
+\bibitem[{{Birnstiel} {et~al.}(2012){Birnstiel}, {Klahr}, \&
+  {Ercolano}}]{Birnstiel2012}
+{Birnstiel}, T., {Klahr}, H., \& {Ercolano}, B. 2012, aap, 539, A148
+
+\bibitem[{{Blum} \& {Wurm}(2008)}]{blumwurm2008}
+{Blum}, J., \& {Wurm}, G. 2008, araa, 46, 21
+
+\bibitem[{Blum {et~al.}(1998)Blum, Wurm, Poppe, \& Heim}]{blum1998}
+Blum, J., Wurm, G., Poppe, T., \& Heim, L.-O. 1998, Earth, Moon, and Planets,
+  80, 285
+
+\bibitem[{Brady \& Bossis(1988)}]{brady1988}
+Brady, J.~F., \& Bossis, G. 1988, Annual review of fluid mechanics, 20, 111
+
+\bibitem[{{Capelo}(2018)}]{Capelo2018}
+{Capelo}, H. 2018, PhD thesis, Universit{\"a}t G{\"o}ttingen
+
+\bibitem[{{Carrera} {et~al.}(2017){Carrera}, {Gorti}, {Johansen}, \&
+  {Davies}}]{Carrera2017}
+{Carrera}, D., {Gorti}, U., {Johansen}, A., \& {Davies}, M.~B. 2017,
+  Astrophysical Journal, 839, 16
+
+\bibitem[{{Cunningham}(1910)}]{cunningham1910}
+{Cunningham}, E. 1910, Proceedings of the Royal Society of London Series A, 83,
+  357
+
+\bibitem[{Dekker(2005)}]{Dekker2005}
+Dekker, A. 2005, Journal of Social Structure (JOSS), 6
+
+\bibitem[{Drazkowska \& Dullemond(2014)}]{drkazkowska2014}
+Drazkowska, J., \& Dullemond, C.~P. 2014, Astronomy \& Astrophysics, 572, A78
+
+\bibitem[{{Goldreich} \& {Ward}(1973)}]{Goldreich1973}
+{Goldreich}, P., \& {Ward}, W.~R. 1973, The Astrophysical Journal, 183, 1051
+
+\bibitem[{Guazzelli(2006)}]{GUAZZELLI2006539}
+Guazzelli, E. 2006, Comptes Rendus MÃ©canique, 334, 539 , observation,
+  analysis and modelling in complex fluid media
+
+\bibitem[{Guazzelli \& Hinch(2011)}]{guazzelli2011}
+Guazzelli, {\'E}., \& Hinch, J. 2011, Annual review of fluid mechanics, 43, 97
+
+\bibitem[{Hutchins {et~al.}(1995)Hutchins, Harper, \& Felder}]{hutchins1995}
+Hutchins, D., Harper, M., \& Felder, R. 1995, Aerosol Science and Technology,
+  22, 202
+
+\bibitem[{J{\'a}nosi {et~al.}(1997)J{\'a}nosi, T{\'e}l, Wolf, \&
+  Gallas}]{janosi1997}
+J{\'a}nosi, I.~M., T{\'e}l, T., Wolf, D.~E., \& Gallas, J.~A. 1997, Physical
+  Review E, 56, 2858
+
+\bibitem[{{Johansen} \& {Klahr}(2005)}]{Johansen2005}
+{Johansen}, A., \& {Klahr}, H. 2005, apj, 634, 1353
+
+\bibitem[{{Johansen} {et~al.}(2011){Johansen}, {Klahr}, \&
+  {Henning}}]{2011A&A...529A..62J}
+{Johansen}, A., {Klahr}, H., \& {Henning}, T. 2011, Astronomy and Astrophysics,
+  529, A62
+
+\bibitem[{Johansen {et~al.}(2015)Johansen, Mac~Low, Lacerda, \&
+  Bizzarro}]{Johansen2015}
+Johansen, A., Mac~Low, M.-M., Lacerda, P., \& Bizzarro, M. 2015, Science
+  Advances, 1, e1500109
+
+\bibitem[{{Johansen} {et~al.}(2007){Johansen}, {Oishi}, {Mac Low}, {Klahr},
+  {Henning}, \& {Youdin}}]{Johansen2007}
+{Johansen}, A., {Oishi}, J.~S., {Mac Low}, M.-M., {et~al.} 2007, Nature, 448,
+  1022
+
+\bibitem[{Johansen \& Youdin(2007)}]{JohansenYoudin2007}
+Johansen, A., \& Youdin, A. 2007, The Astrophysical Journal, 662, 627
+
+\bibitem[{{Jungmann} {et~al.}(2018){Jungmann}, {Steinpilz}, {Teiser}, \&
+  {Wurm}}]{Jungmann2018}
+{Jungmann}, F., {Steinpilz}, T., {Teiser}, J., \& {Wurm}, G. 2018, Journal of
+  Phys. Comm.
+
+\bibitem[{{Kelling} {et~al.}(2014){Kelling}, {Wurm}, \&
+  {Koester}}]{Kelling2014}
+{Kelling}, T., {Wurm}, G., \& {Koester}, M. 2014, apj, 783, 111
+
+\bibitem[{Klahr \& Henning(1997)}]{klahr1997}
+Klahr, H.~H., \& Henning, T. 1997, Icarus, 128, 213
+
+\bibitem[{Koch \& Shaqfeh(1989)}]{koch_shaqfeh_1989}
+Koch, D.~L., \& Shaqfeh, E. S.~G. 1989, Journal of Fluid Mechanics, 209,
+  521–542
+
+\bibitem[{{Kruss} {et~al.}(2016){Kruss}, {Demirci}, {Koester}, {Kelling}, \&
+  {Wurm}}]{kruss2016}
+{Kruss}, M., {Demirci}, T., {Koester}, M., {Kelling}, T., \& {Wurm}, G. 2016,
+  apj, 827, 110
+
+\bibitem[{{Kruss} {et~al.}(2017){Kruss}, {Teiser}, \& {Wurm}}]{kruss2017}
+{Kruss}, M., {Teiser}, J., \& {Wurm}, G. 2017, aap, 600, A103
+
+\bibitem[{Lambrechts {et~al.}(2016)Lambrechts, Johansen, Capelo, Blum, \&
+  Bodenschatz}]{Lambrechts2016}
+Lambrechts, M., Johansen, A., Capelo, H.~L., Blum, J., \& Bodenschatz, E. 2016,
+  Astronomy \& Astrophysics, 591, A133
+
+\bibitem[{{Lee} {et~al.}(2015){Lee}, {Waitukaitis}, {Miskin}, \&
+  {Jaeger}}]{lee2015}
+{Lee}, V., {Waitukaitis}, S.~R., {Miskin}, M.~Z., \& {Jaeger}, H.~M. 2015,
+  Nature Physics, 11, 733
+
+\bibitem[{Marchiori \& Latora(2000)}]{marchiori2000}
+Marchiori, M., \& Latora, V. 2000, Physica A: Statistical Mechanics and its
+  Applications, 285, 539
+
+\bibitem[{{Nakagawa} {et~al.}(1986){Nakagawa}, {Sekiya}, \&
+  {Hayashi}}]{1986Icar...67..375N}
+{Nakagawa}, Y., {Sekiya}, M., \& {Hayashi}, C. 1986, icarus, 67, 375
+
+\bibitem[{{Ormel} \& {Cuzzi}(2007)}]{Ormel2007}
+{Ormel}, C.~W., \& {Cuzzi}, J.~N. 2007, Astronomy and Astrophysics, 466, 413
+
+\bibitem[{Poppe \& Blum(1997)}]{PoppeBlum1997}
+Poppe, T., \& Blum, J. 1997, Advances in Space Research, 20, 1595
+
+\bibitem[{{Safronov}(1969)}]{Safronov1969}
+{Safronov}, V.~S. 1969, {Evoliutsiia Doplanetnogo Oblaka.} (English transl.:
+  Evolution of the protoplanetary cloud and formation of Earth and the planets,
+  NASA Tech. Transl. F-677, Jerusalem: Israel Sci. Transl. 1972)
+
+\bibitem[{Schindelin {et~al.}(2012)Schindelin, Arganda-Carreras, Frise, Kaynig,
+  Longair, Pietzsch, Preibisch, Rueden, Saalfeld, Schmid, {et~al.}}]{fiji2012}
+Schindelin, J., Arganda-Carreras, I., Frise, E., {et~al.} 2012, Nature methods,
+  9, 676
+
+\bibitem[{Schreiber \& Klahr(2018)}]{schreiber2018}
+Schreiber, A., \& Klahr, H. 2018, arXiv preprint arXiv:1805.04326
+
+\bibitem[{Segre {et~al.}(1997)Segre, Herbolzheimer, \& Chaikin}]{Segre1997}
+Segre, P., Herbolzheimer, E., \& Chaikin, P. 1997, Physical Review Letters, 79,
+  2574
+
+\bibitem[{Simon {et~al.}(2016)Simon, Armitage, Li, \& Youdin}]{simon2016}
+Simon, J.~B., Armitage, P.~J., Li, R., \& Youdin, A.~N. 2016, The Astrophysical
+  Journal, 822, 55
+
+\bibitem[{{Squire} \& {Hopkins}(2018)}]{Squire2018SI}
+{Squire}, J., \& {Hopkins}, P.~F. 2018, MNRAS, 823
+
+\bibitem[{Tinevez {et~al.}(2017)Tinevez, Perry, Schindelin, Hoopes, Reynolds,
+  Laplantine, Bednarek, Shorte, \& Eliceiri}]{trackmate}
+Tinevez, J.-Y., Perry, N., Schindelin, J., {et~al.} 2017, Methods, 115, 80
+
+\bibitem[{{Weidenschilling}(1977)}]{Weidenschilling1977a}
+{Weidenschilling}, S.~J. 1977, mnras, 180, 57
+
+\bibitem[{{Weidenschilling}(1980)}]{Weidenschilling1980}
+---. 1980, Icarus, 44, 172
+
+\bibitem[{Yang {et~al.}(2017)Yang, Johansen, \& Carrera}]{yang2017}
+Yang, C.-C., Johansen, A., \& Carrera, D. 2017, Astronomy \& Astrophysics, 606,
+  A80
+
+\bibitem[{{Yoshimatsu} {et~al.}(2017){Yoshimatsu}, {Ara{\'u}jo}, {Wurm},
+  {Herrmann}, \& {Shinbrot}}]{yoshimatsu2017}
+{Yoshimatsu}, R., {Ara{\'u}jo}, N.~A.~M., {Wurm}, G., {Herrmann}, H.~J., \&
+  {Shinbrot}, T. 2017, Scientific Reports, 7, 39996
+
+\bibitem[{Youdin \& Goodman(2005)}]{Youdin2005}
+Youdin, A.~N., \& Goodman, J. 2005, The Astrophysical Journal, 620, 459
+
+\bibitem[{{Zsom} {et~al.}(2010){Zsom}, {Ormel}, {G{\"u}ttler}, {Blum}, \&
+  {Dullemond}}]{zsom2010}
+{Zsom}, A., {Ormel}, C.~W., {G{\"u}ttler}, C., {Blum}, J., \& {Dullemond},
+  C.~P. 2010, Astronomy and Astrophysics, 513, A57
+
+\end{thebibliography}
+
+
+
+%\bibitem{RefJ}
+% Format for Journal Reference
+%Author, Article title, Journal, Volume, page numbers (year)
+% Format for books
+%\bibitem{RefB}
+%Author, Book title, page numbers. Publisher, place (year)
+% etc
+%\end{thebibliography}
+
+\end{document}
+

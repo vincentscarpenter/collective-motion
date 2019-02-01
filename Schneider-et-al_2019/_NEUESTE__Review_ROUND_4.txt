@@ -1,0 +1,34 @@
+Referee Report
+Reviewer's Comments:
+Review comments, round 4
+
+Dear authors,
+
+I am satisfied with the answers and manuscript revisions performed after my last comments. There is one last point I would like to see worked in though: error bars in Fig. 8 and 9. Given that the points shown in Fig. 8 are averaged over a great number of measurements, it is well possible that the error bars (e.g. mean absolute deviation) are smaller than the symbols, in which case please just specify it in the figure caption. If error bars are visible though, it would be great to see them in the figure to both support the understanding of the measurement precision and visualize the goodness of fit. In Fig. 9 the error bars would be even more important to understand the measurements performed and the value of the shown fit. This could be a chi squared statistic of a 1-sigma error for the fit, which would just need to be specified in the caption.
+
+I wish the authors all the best for the new year!
+
+
+------------------------------------
+Reply:
+
+Dear Referee,
+
+Thank you for the effort put into this review and suggestions for further improvement of the manuscript. 
+
+
+Error bars in fig. 8 are indeed smaller than the symbols. We gave numbers in the caption.
+
+We added the error bars in fig. 9 according to the parameter uncertainties of the linear fits of fig. 8.
+Also we added the uncertainties of fit parameters of the fits in fig. 9 (this is change is not bold in the manuscript since latex does not write equations in bold).
+
+
+All the best for the new year!
+
+Sincerely
+the authors
+
+
+
+
+

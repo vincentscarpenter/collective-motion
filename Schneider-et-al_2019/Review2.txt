@@ -1,0 +1,66 @@
+Dear Editor, Dear Dr. Savin,
+
+thank you for continuing to consider our manuscript for publication in spite of the recent referee report. As asked, we added a point by point response to the last report. We also welcome the review by a second reviewer and certainly it is o.k. to forward all previous reports and responses.
+
+May we ask one thing though. In a number of journals requests can be made to exclude specific reviewers. If that would not collide with ApJ policy, we would ask not to choose the second reviewer from the co-authors of the Lambrechts 2016 paper. We are in correspondence with this group but as outlined in earlier (too long) responses we have quite different views on each others experiments. 
+
+We are aware that they submitted a paper on their experiments to a different journal at a similar time as we did and for some reason all their authors seem very focused on their (different) approach but somehow seem to consider us a competitors. We never considered it a competition. We typically do not ask to exclude reviewers, in fact never did before, and it should not be necessary in a objective scientific world but as there are enough scientists working on or using streaming instabilities and such, we hope our request would not decrease the quality of the review process.
+
+Sincerely,
+
+The authors
+
+
+
+
+
+
+
+###################
+Reviewer: The authors have edited the text in the manuscript. They have re-written the abstract and introduction to give a more solid starting point for their study and to put it in dialogue with other related studies. They removed the questionable rotation metaphors. They supplied more information about their methods and the experimental parameters.
+
+However, some of the more technical details remain problematic and so, regrettably, I do not further consider this manuscript for publication. My justifications are below, with numbering and lettering in reference to my original report.
+
+
+
+
+
+Reviewer: 3.2 I asked the authors to define a coordinate system and align it with the relevant forces.
+
+They did name a section 2.2 "coordinate system" and say that the coordinates are Cartesian.
+Unfortunately, they do not write out a formal force balance equation and explain how the forces are aligned with the coordinate system. This is a necessary step in the formal introduction of their dynamical parameters.
+They seem to justify avoiding this task since they are effectively treating the system as if gravity is the only force. They ignore centrifugal forces because they cause changes over time scales of seconds. Unfortunately, they are also averaging their results over second-long time scales (each round of rotation; the main discovery here is based on noticing that the system behavior noticeably changes exactly on this time scale). Ignoring motions due to centrifugal force is potentially quite a strong source of bias that cannot be dismissed.
+
+Also, it is questionable to design a system where changing the control parameter (epsilon) depends upon centrifugal losses, but then to claim that centrifugal forces are not relevant to the dynamics.
+
+Reply: The reviewer seems to assume that this experiment was designed to verify a specific numerical situation or setting. It is not. It is but one experiment studying the motion of particles in dense particle clouds. This is a real experiment and real experiments with particles do have losses. We cannot invoke boundary conditions to our liking. In no way did we ignore centrifugal forces. In fact we discuss it and potential effects in many occasions. We explicitly stated that this might change the dynamics. 
+Whoever models this later just has to take this into account.
+We quantify centrifugal loss and we specified clearly that the drift is small compared to sedimentation. This does not need any elaborate equation system. With the small friction times as stated grains couple to the gas in ms and follow its motion, especially gravity. The centrifugal force is only a slow add on as the circular motion of individual grains clearly visualizes. As we speculated, centrifugal forces might have an influence on the particle dynamic but that is not a weakness of the experiment. As is clearly visible in the data, the evolution allows averaging over seconds in any case as the trends are clearly visible and do not depend on the exact time interval of averaging. The system studied is just a system studied with some centrifugal forces. We see no problem with that.
+
+Nevertheless, we added formal force balance equation, explained the way forces are aligned and updated figure 2 to clarify our coordination system.
+
+
+
+
+Reviewer: 4.7 The authors do not devise a statistical significance (or convergence) metric for the existing data as I asked.
+
+Reply: Again, this is an experimental paper on studying dense particle clouds. We do not consider the time evolution or any steady state. We never said so. There is no convergence at any time. There is only the momentary motions of all grains depending on the motion of all other grains. The experiment is as it is. We show all data as they are. We have a huge amount of particle data so the statistical deviations from average values are negligible.
+
+
+
+
+Reviewer: 4.3 In their description of figure 8 (the main result), the authors claim that the colored lines derive from linear fits to their data. However, roughly half of the data appear to be very poorly fitted. 
+
+It therefore seems quite dangerous to propose such a law as equations 13 and 14 and claim that experimental evidence supports the truth of it.
+
+Reply: We trust that readers can judge the quality of the linear fits to the data and also recognize the deviations which are there for sure. We did not hide the difference. As we noted in the manuscript, this is a first order approximation. This is standard practice in experimental physics. If you have a set of data without a detailed model, try constant values, linear dependence, power laws, or exponential fits. All these are regularly used to describe a data set. We did nothing more. Everyone can see that there are deviations but the idea is to reduce the data to something simple to work with and show that there is an effect. We still believe, the data and the linear fits do this job perfectly.
+
+
+
+
+Reviewer: While there will always be some unresolved questions at the end of a study, the present work is not fully accounting for the possible statistical and dynamical biases that could undermine the conclusions they reach.
+
+Reply: We respectfully disagree with the reviewer. We did not do any interpretation. The setting is clear, simple and the best you can do. All data are shown. A reader exactly gets what we observe - no application of any model to blur or explain the data - just plain facts. That is not debatable at all. 
+We are not aware of any other experiment (except by Capelo, which is of a different kind) that studies the transition of dilute to collective particle clouds from dilute to dense environments. There are lots of papers referring to or detailing instabilities in dense clouds but currently, they are all numerical or theoretical. There is not a single laboratory experiment. 
+
+We thank the reviewer for taking the time to share his or her ideas with us. Certainly, this clearly helped to improve the manuscript apart from the basic disagreement.
