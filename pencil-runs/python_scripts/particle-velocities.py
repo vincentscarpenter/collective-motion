@@ -1,0 +1,108 @@
+import pencil
+import numpy
+from matplotlib import pyplot
+from matplotlib import cm
+import sys
+import os
+
+base_path,script_name   = os.path.split(sys.argv[0])
+scratch,simulation_name = os.path.split(base_path)
+script_name             = script_name[:-3]
+
+data        = pencil.read_var(trimall=True)
+pdata       = pencil.read_pvar()
+time_series = pencil.read_ts()
+parameters  = pencil.read_param()
+
+npar   = len(pdata.ipars)
+xgrid  = data.x
+ygrid  = data.y
+zgrid  = data.z
+dxgrid = data.dx
+dygrid = data.dy
+dzgrid = data.dz
+x0 = xgrid[0]
+y0 = ygrid[0]
+z0 = zgrid[0]
+x1 = xgrid[-1]
+y1 = ygrid[-1]
+z1 = zgrid[-1]
+last_snap = numpy.floor(time_series.t[-1]/parameters.tausp) + 1
+
+ivar_lower = 0
+ivar_upper = last_snap
+if(len(sys.argv) == 3):
+    ivar_lower = int(sys.argv[1])
+    ivar_upper = int(sys.argv[2])
+    nvar       = ivar_upper - ivar_lower + 1
+if(ivar_lower < 0 or ivar_upper > last_snap or nvar < 1):
+    print("ivar range is not valid. Exiting...")
+    sys.exit()
+else:
+    print("Tracking particle velocities from ivar = " + str(ivar_lower) + " to " + str(ivar_upper))
+
+particle_velocities = numpy.zeros((npar,nvar))
+onepar_velocity  = numpy.zeros(nvar)
+for ivar in range(ivar_lower,ivar_upper+1):
+    var     = "PVAR" + str(ivar)
+    pdata = pencil.read_pvar(varfile=var)
+    data  = pencil.read_var(ivar=ivar,trimall=True)
+    pdata_1p = pencil.read_pvar(varfile=var, datadir="../1-particle/data/")
+    onepar_velocity[ivar-ivar_lower] = pdata_1p.vpz[0]
+    for index in range(npar):
+        ipar  = pdata.ipars[index] - 1
+        vpz   = pdata.vpz[index]
+        particle_velocities[ipar,ivar-ivar_lower] = vpz
+
+fig, ((ax1)) = pyplot.subplots(1,1)
+fig.set_size_inches(19.2,10.8)
+fig.set_dpi(100)
+
+if(nvar == 1):
+    ax1.set_xlim(ivar_lower-0.5,ivar_lower+0.5)
+    pmarker="o"
+else:
+    ax1.set_xlim(ivar_lower,ivar_upper)
+    pmarker=None
+markersize = 10.0
+
+ymin = 0.0
+ymax = -1.0e10
+time       = numpy.array(range(ivar_lower,ivar_upper+1))
+colors     = cm.get_cmap('viridis')(numpy.linspace(0.0,1.0,npar))
+for ipar in range(npar):
+    velocity_array = particle_velocities[ipar]*1000.*2.
+    pcolor         = colors[ipar]
+    if(velocity_array.min() < ymin):
+        ymin = velocity_array.min()
+    if(velocity_array.max() > ymax):
+        ymax = velocity_array.max()
+    ax1.plot(time,velocity_array,linewidth=2.0,marker=pmarker,color=pcolor)
+
+onepar_velocity_array = onepar_velocity*1000.*2.
+if(onepar_velocity_array.min() < ymin):
+    ymin = onepar_velocity_array.min()
+if(onepar_velocity_array.max() > ymax):
+    ymax = onepar_velocity_array.max()
+ax1.plot(time,onepar_velocity_array,linewidth=5.0,color="black")
+free_fall_velocity = -9.8*14.0*time
+ax1.plot(time,free_fall_velocity,linestyle="--",linewidth=5.0,color="grey")
+
+#if(ymax < 0.0):
+#    ymax = ymax + 0.1*(ymax-ymin)
+#ymin = ymin - 0.1*(ymax-ymin)
+#ax1.set_ylim(ymin,ymax)
+ax1.set_ylim([-600.0,0.0])
+
+ax1.set_xlabel(r"t ($\tau_{f}$)",fontsize=24)
+ax1.set_ylabel(r"$v_{rel}$ (mm $s^{-1}$)",fontsize=24)
+
+for tick in ax1.xaxis.get_major_ticks():
+    tick.label.set_fontsize(19)
+for tick in ax1.yaxis.get_major_ticks():
+    tick.label.set_fontsize(19)
+
+file_title = simulation_name + "_" + script_name + "_" + str(ivar_lower) + "-" + str(ivar_upper) + ".png"
+fig.savefig(file_title,bbox_inches="tight")
+
+pyplot.show()
