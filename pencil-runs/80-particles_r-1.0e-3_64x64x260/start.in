@@ -1,0 +1,87 @@
+!                              -*-f90-*-     (for emacs)
+&init_pars
+!
+! mesh Reynolds number Re_mesh= v*dx/nu = (tau*g/nu)*dx = (0.014 * 2.45/.0000138)*dx = 2485 * dx.
+! We don't need to resolve Re_mesh < 1, since these flows will not be well represented by our value of nu
+! Re_mesh > 1 -> dx > 0.000402 in code units
+!
+! So, with our given viscosity, we cannot accurately capture fluid velocity features on scales smaller than
+! 0.000402 m = 402 micrometers, a bit more than twice the particle diameter of 165 micrometers.
+!
+! This information is useful for choosing the number of grid points (in cparam.local) in conjunction with
+! the box size found here.
+!
+  cvsid='$Id$',
+  xyz0  =  -0.015,  -0.015,   0.000
+  xyz1  =   0.015,   0.015,   0.120
+  lperi =      F,       F,      F
+  lwrite_ic=T, lwrite_aux=T
+  llocal_iso=T
+  ip=14
+!
+!
+! s   => dq/dx = 0
+! a   =>  q    = 0
+! a2  => dq/dx = const
+! out => outflow
+!
+!         ux   uy   uz   rho  ss   shock  spot  gr   gphi  gz
+  bcx =  'a' ,'a' ,'a' , 'a2'
+  bcy =  'a' ,'a' ,'a' , 'a2'
+  bcz =  'a' ,'a' ,'a' , 'a2'
+!
+! My current rationale for these boundary conditions is as follows: the perpendicular component of gas velocity must go to zero at each boundary,
+! which is enforced by choosing an antisymmetric boundary condition 'a'. 
+!
+/
+&initial_condition_pars
+!
+! Locally isothermal -> local cs2 = global cs2 in EOS module; global cs2 must be set somewhere
+! No other module appears to do this for a locally isothermal simulation, must be done here.
+!
+! Interpreting the units of length and time as meters and half seconds will cause other values
+! in this file to match experimental ones.
+! In m/s, sound speed of air at room temperature is 343 m/s = 171.5 m/(0.5 s)
+!
+  cs0=171.5
+!
+/
+&hydro_init_pars
+  inituu='zero'  ! no initial gas motion; this may change after the basic simulation
+/
+&density_init_pars
+  initlnrho='const_lnrho'
+  lnrho_const=0.0               ! experiment gas density = 0.02 kg/m^3
+  ldensity_nolog=T
+/
+&eos_init_pars
+  gamma=1.4
+  ! locally isothermal; no need for rho0 here (set in density module)
+  ! locally isothermal; no need for cs0 here (set based on global value, which is determined in InitialCondition module)
+/
+&grav_init_pars
+  lgravx_gas=F,lgravy_gas=F,lgravz_gas=F
+/
+&particles_init_pars
+  initxxp='random-sphere'
+  pos_sphere = 0.00, 0.00, 0.10
+  rad_sphere = 0.001            ! for 80 particles, our condition predicts r < 0.0089 should give collective motion
+  initvvp='constant'
+  vpx0 = 0.0
+  vpy0 = 0.0
+  vpz0 = 0.0
+  bcpx='hw',bcpy='hw',bcpz='hw'  ! hard wall boundary conditions
+  lcheck_exact_frontier=T
+  lmigration_real_check=T
+  lparticlemesh_tsc=T            ! interpolation scheme for moving particle quantities to the mesh and back
+  !lparticlemesh_cic=T
+  tausp=0.014                    ! stopping time ; = stokes number in code units. St = 0.014, friction time = 0.007 s => code unit of time is 0.5 s
+!
+! volume of the box is .03*.12*.03 = 1.08e-4 = gas mass in box, since average density is 1.0
+! in code units, the particle density is 60/0.02 ~ 3124 (used in other run)
+! mp = (4./3)*pi*(165e-6/2)**3*3124 = 7.35e-9
+! 80*mp / 1.08e-4 = eps_dtog
+!
+  eps_dtog=5.44e-3
+/
+
