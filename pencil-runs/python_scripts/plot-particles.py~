@@ -1,6 +1,7 @@
 import pencil
 import numpy
 from matplotlib import pyplot
+from matplotlib import cm
 from matplotlib import gridspec
 import sys
 import os
@@ -15,13 +16,14 @@ if len(sys.argv) > 1:
     ivar = int(sys.argv[1])
     pvar = "PVAR" + sys.argv[1]
 
-parameters = pencil.read_param()
-data       = pencil.read_var(ivar=ivar)
+parameters = pencil.read_param(quiet=True)
+data       = pencil.read_var(ivar=ivar,quiet=True)
 pdata      = pencil.read_pvar(varfile=pvar)
 
 xp = pdata.xp
 yp = pdata.yp
 zp = pdata.zp
+npar = len(pdata.ipars)
 
 x0 = parameters.xyz0[0]
 y0 = parameters.xyz0[1]
@@ -66,8 +68,16 @@ yslice_lower = y_center - y_lower_frac*(y_center-y0)
 yslice_upper = y_center + y_upper_frac*(y1-y_center)
 yslice       = numpy.intersect1d(numpy.where(yp >= yslice_lower),numpy.where(yp <= yslice_upper))
 
-markersize  = 20.0
-markercolor = "green"
+tag_particles = True
+markersize  = 30.0
+if(tag_particles):
+    markercolor = cm.get_cmap('viridis')(numpy.linspace(0.0,1.0,npar))
+    sort_by_ipar = numpy.argsort(pdata.ipars)
+    xp = xp[sort_by_ipar]
+    yp = yp[sort_by_ipar]
+    zp = zp[sort_by_ipar]
+else:
+    markercolor = "black"
 labelfontsize = 25
 tickfontsize = 19
 
@@ -76,8 +86,8 @@ tickfontsize = 19
 ax1.scatter(xp*1000.,zp*1000.,s=markersize,c=markercolor)
 ax2.scatter(yp*1000.,zp*1000.,s=markersize,c=markercolor)
 
-ax1.axis("equal")
-ax2.axis("equal")
+#ax1.axis("equal")
+#ax2.axis("equal")
 
 ax1.set_xlim([x0*1000.,x1*1000.])
 ax2.set_xlim([y0*1000.,y1*1000.])
