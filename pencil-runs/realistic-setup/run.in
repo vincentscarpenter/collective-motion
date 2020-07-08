@@ -4,15 +4,13 @@
 !
 &run_pars
   cvsid='$Id$',
-!  nt=1000000000
-!  it1=100, dsnap=.014, dvid=0.00014, isave=1000, d2davg=0.014
-  nt=10000
-  it1=10, dsnap=.014, dvid=0.00014, isave=1000, d2davg=0.014
+  nt=1000000000
+  it1=100, dsnap=.014, dvid=0.00014, isave=1000, d2davg=0.014
   dtmin=1.0e-15
   itorder=3, cdt=0.4, cdtv=0.4
   lpencil_check=F
-  tmax=1.4                       ! maximum simulation time, in code units ; = 100*tau, ~ 3*t_ff(from top)
-  max_walltime=42900            ! maximum wall clock time, in seconds    ; 11h55m
+  tmax=7.0                       ! maximum simulation time, in code units ; = 500*tau
+  max_walltime=86400            ! maximum wall clock time, in seconds    ; 24h00m
 /
 &eos_run_pars
 /

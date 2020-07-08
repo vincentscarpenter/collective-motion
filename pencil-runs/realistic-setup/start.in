@@ -28,10 +28,15 @@
 !         ux   uy   uz   rho  ss   shock  spot  gr   gphi  gz
   bcx =  'a' ,'a' ,'a' , 'a2'
   bcy =  'a' ,'a' ,'a' , 'a2'
-  bcz =  'a' ,'a' ,'a' , 'a2'
+  bcz =  's' ,'s' ,'a' , 'a2'
 !
-! My current rationale for these boundary conditions is as follows: the perpendicular component of gas velocity must go to zero at each boundary,
-! which is enforced by choosing an antisymmetric boundary condition 'a'. 
+! As long as the inside of the cylinder remains isolated from the outside, these shouldn't matter much, with
+! the exception of the z-boundary, which the fluid within the cylinder will reach.
+! Since the velocity profile is driven at the exterior radius, we need to have slip boundary conitions here,
+! so that the full velocity profile is allowed to evolve undisturbed.
+! Ideally, we could actually drive velocity with the same profile here (as is the case in the experiment),
+! but this would take time to implement --- hopefully the slip conditions will be enough.
+! And hopefully the s boundary condition works as a slip condition?
 !
   lcylinder_in_a_box=T, llevitation_experiment_in_a_box=T
   r_ext=0.074
